@@ -1,0 +1,144 @@
+{
+  "metadata": {
+    "version": "1.0",
+    "category": "symptoms",
+    "description": "Guide to common pet symptoms, potential causes, urgency levels, and when to seek veterinary care"
+  },
+  "entries": [
+    {
+      "id": "sym_001",
+      "title": "Ear Scratching and Head Shaking in Dogs and Cats",
+      "species": ["dog", "cat"],
+      "urgency": "medium",
+      "content": "Persistent ear scratching and head shaking in dogs and cats often indicates an ear infection (otitis externa), ear mites, allergies, or foreign objects in the ear canal. Signs include pawing at ears, shaking head repeatedly, dark discharge, strong odor, or redness inside the ear. In dogs, floppy-eared breeds like Cocker Spaniels and Basset Hounds are more prone to ear infections due to reduced airflow. Cats commonly develop ear mites, especially outdoor cats or those in multi-cat households. Yeast infections are common in dogs with allergies, causing brown waxy buildup. Bacterial infections often produce yellow or green pus. Treatment depends on the cause: ear mites require antiparasitic medication, bacterial infections need antibiotics, and yeast infections respond to antifungal drops. Never insert cotton swabs deep into the ear canal. Clean visible outer ear with vet-approved solution. Allergies may require dietary changes or allergy testing. See a vet if symptoms persist more than 3-4 days, if the pet seems in pain, or if there is significant discharge, swelling, or loss of balance.",
+      "tags": ["ear", "scratching", "head shaking", "ear infection", "ear mites", "otitis", "discharge", "allergies"],
+      "when_to_see_vet": "Within 3-4 days if symptoms persist, immediately if balance issues or severe pain"
+    },
+    {
+      "id": "sym_002",
+      "title": "Loss of Appetite in Dogs and Cats",
+      "species": ["dog", "cat"],
+      "urgency": "variable",
+      "content": "A pet refusing to eat can signal anything from minor stress to serious illness. In dogs, short-term appetite loss (under 24 hours) may be caused by stress, dietary change, or minor stomach upset. In cats, appetite loss is more urgent — cats that stop eating for 24-48 hours can develop hepatic lipidosis (fatty liver disease), a potentially life-threatening condition. Common causes include dental pain or tooth abscess, gastrointestinal issues, systemic illness such as kidney disease or infections, pain from injury or arthritis, stress from environmental changes, or new medications. Check for other symptoms like vomiting, diarrhea, lethargy, weight loss, or changes in water intake. Offer small amounts of highly palatable food. For cats, never let them go more than 24-48 hours without eating. For dogs, try withholding food for 12 hours then offering bland diet of boiled chicken and rice. Puppies and kittens should never skip meals as they need constant nutrition for growth. Sudden, complete appetite loss in any pet that was previously eating normally warrants prompt veterinary attention.",
+      "tags": ["not eating", "anorexia", "appetite loss", "refusal to eat", "nausea", "hepatic lipidosis", "dental pain"],
+      "when_to_see_vet": "Dogs: after 24-48 hours; Cats: after 24 hours; immediately if accompanied by vomiting, lethargy, or pain"
+    },
+    {
+      "id": "sym_003",
+      "title": "Vomiting in Dogs and Cats",
+      "species": ["dog", "cat"],
+      "urgency": "variable",
+      "content": "Occasional vomiting may be normal such as eating too fast or eating grass, but frequent or severe vomiting is cause for concern. Acute vomiting causes include dietary indiscretion from eating garbage or foreign objects, gastritis, parasites, motion sickness, or sudden food changes. Chronic vomiting may indicate inflammatory bowel disease, food intolerance, kidney disease, hyperthyroidism in cats, or cancer. Distinguish vomiting which involves forceful ejection with abdominal contractions from regurgitation which is passive expulsion from the esophagus. Yellow foam vomit often indicates an empty stomach. Blood in vomit, appearing red or like dark coffee grounds, is an emergency. After one vomiting episode, withhold food for 2-4 hours and offer small amounts of water. Bland diet of boiled chicken and rice is recommended for 24 hours after vomiting stops. Warning signs requiring immediate vet care include vomiting more than 2-3 times in a few hours, blood in vomit, signs of pain or bloated abdomen, ingestion of toxins or foreign objects, concurrent lethargy, or vomiting in young puppies or kittens. Dehydration is a serious risk with repeated vomiting.",
+      "tags": ["vomiting", "nausea", "gastritis", "regurgitation", "blood in vomit", "dietary indiscretion"],
+      "when_to_see_vet": "Immediately if blood present, more than 3 episodes, or signs of pain or bloating. Within 24 hours for persistent vomiting."
+    },
+    {
+      "id": "sym_004",
+      "title": "Diarrhea in Dogs and Cats",
+      "species": ["dog", "cat"],
+      "urgency": "variable",
+      "content": "Diarrhea is one of the most common pet health complaints. Acute diarrhea with sudden onset is usually caused by dietary changes, stress, intestinal parasites, viral infections such as Parvovirus in unvaccinated dogs, or bacterial infections. Chronic diarrhea lasting more than 3 weeks suggests inflammatory bowel disease, food intolerance, parasites, or serious underlying disease. Soft stool is less concerning than watery diarrhea. Blood in stool, bright red indicating lower intestinal origin or dark tarry indicating upper GI origin, requires immediate vet attention. For mild diarrhea: withhold food 12-24 hours but not in puppies or kittens, offer small amounts of water to prevent dehydration, then provide bland diet of boiled chicken and rice. Probiotics designed for pets can help restore gut flora. Deworming may be needed if parasites are suspected. Never give human anti-diarrheal medications without vet guidance as some are toxic to pets. Seek immediate vet care if: diarrhea is severe or does not improve after 24-48 hours, blood is present, pet is lethargic, vomiting concurrently, showing signs of dehydration such as sunken eyes or dry gums, or if a puppy or kitten is affected.",
+      "tags": ["diarrhea", "loose stool", "blood in stool", "parasites", "parvovirus", "IBD", "dehydration"],
+      "when_to_see_vet": "Immediately if blood, severe dehydration, or affects young puppies or kittens. Within 24-48 hours if does not resolve."
+    },
+    {
+      "id": "sym_005",
+      "title": "Limping and Lameness in Pets",
+      "species": ["dog", "cat"],
+      "urgency": "medium",
+      "content": "Limping can result from soft tissue injuries, fractures, joint disease, paw injuries, or neurological conditions. Sudden-onset limping often indicates acute injury such as sprains, strains, fractures, paw pad cuts, or foreign bodies like thorns or glass embedded in the paw. Gradual onset limping may suggest arthritis especially in older or large-breed dogs, hip dysplasia, elbow dysplasia, Lyme disease, or cancer. Check the paw first by looking for cuts, swelling, broken nails, or embedded objects. Small dogs and cats sometimes experience luxating patellas where the kneecap slips out, causing intermittent hopping. Large breeds may develop degenerative joint disease over time. For minor limping: rest your pet, limit activity, and remove any obvious foreign bodies from the paw. Apply cold compress for 15 minutes three times daily if swelling is present during the first 24 hours. Emergency situations include complete inability to bear weight, obvious bone deformity, extreme pain, rapidly swelling joint, or limping in a cat after a fall from height since cats can break multiple bones in falls. Older pets with new-onset limping warrant x-rays to rule out bone cancer.",
+      "tags": ["limping", "lameness", "arthritis", "hip dysplasia", "fracture", "sprain", "paw injury", "joint pain"],
+      "when_to_see_vet": "Immediately if non-weight bearing, bone deformity, or extreme pain. Within 24-48 hours for persistent limping."
+    },
+    {
+      "id": "sym_006",
+      "title": "Excessive Thirst and Frequent Urination (PU/PD)",
+      "species": ["dog", "cat"],
+      "urgency": "high",
+      "content": "Polydipsia which is excessive drinking and polyuria which is excessive urination occurring together is a significant medical sign often abbreviated as PU/PD. Common causes include diabetes mellitus which is more common in cats and mid-to-large dogs, kidney disease or failure, Cushing's disease (hyperadrenocorticism) which is more common in dogs, Addison's disease, pyometra which is a uterine infection in unspayed females, liver disease, hypercalcemia, or certain medications such as steroids or diuretics. Diabetes in cats often presents with increased thirst, weight loss despite good appetite, and weakness in the hind legs. Diabetes in dogs causes similar symptoms plus frequent urinary accidents. Kidney disease gradually impairs the kidney's ability to concentrate urine, requiring more water intake to compensate. Cushing's disease from excess cortisol causes a pot-bellied appearance, hair loss, and PU/PD. If you notice your pet suddenly drinking significantly more water or having accidents in the house, track water consumption for 24-48 hours then seek veterinary evaluation. Bring a fresh urine sample to the appointment. Blood tests and urinalysis will help identify the cause. Many of these conditions are manageable with proper treatment when caught early.",
+      "tags": ["excessive thirst", "frequent urination", "polydipsia", "polyuria", "diabetes", "kidney disease", "Cushings", "accidents"],
+      "when_to_see_vet": "Within 1-2 days — these conditions worsen without treatment but are usually manageable when caught early"
+    },
+    {
+      "id": "sym_007",
+      "title": "Lethargy and Unusual Low Energy in Pets",
+      "species": ["dog", "cat"],
+      "urgency": "variable",
+      "content": "Lethargy is defined as reduced activity, reluctance to play, sleeping more than usual, or general low energy and is a non-specific but important symptom. Brief lethargy after vigorous exercise, very hot weather, or vaccinations is normal. Persistent lethargy lasting more than 24-48 hours or sudden severe lethargy requires investigation. Common causes include pain from any source, infections whether bacterial, viral, or fungal, anemia, hypothyroidism in dogs, heart disease, liver or kidney problems, cancer, severe dehydration, toxin ingestion, or depression and stress. Check for other symptoms such as fever (normal dog temperature is 101-102.5°F and cat temperature is 100.5-102.5°F), loss of appetite, vomiting, difficulty breathing, pale gums, or recent trauma. Pale or white gums indicate anemia or shock and are an emergency. Rapid breathing with lethargy can indicate heart failure or respiratory disease. If your normally energetic pet is lethargic for more than 24 hours with no obvious cause, schedule a vet visit. Sudden collapse or extreme weakness warrants an emergency vet visit immediately. Senior pets with new lethargy should be evaluated promptly as they may be masking pain from arthritis or early organ failure.",
+      "tags": ["lethargy", "low energy", "tiredness", "weakness", "fatigue", "depression", "hypothyroidism", "anemia"],
+      "when_to_see_vet": "Within 24-48 hours. Immediately if sudden onset, pale gums, difficulty breathing, or collapse."
+    },
+    {
+      "id": "sym_008",
+      "title": "Coughing in Dogs and Cats",
+      "species": ["dog", "cat"],
+      "urgency": "variable",
+      "content": "Coughing has different causes in dogs versus cats. In dogs, common causes include kennel cough from Bordetella which produces a harsh honking cough often after boarding, tracheal collapse in small breeds producing a goose-honk cough, heart disease producing a soft moist cough that is worse at night, pneumonia, heartworm disease, or a foreign body. In cats, coughing and wheezing often indicates asthma which is common in cats, respiratory infection, or less commonly heartworm. Kennel cough in dogs is highly contagious but usually self-limiting in 7-14 days in healthy adult dogs. However it can be serious in puppies, seniors, or immunocompromised dogs. Persistent cough with blue or gray gums, open-mouth breathing in cats which is not normal for them, coughing up blood, or extreme distress is an emergency. Chronic cough lasting more than 2 weeks needs veterinary investigation. Brachycephalic breeds such as Bulldogs, Pugs, and Persian cats are prone to respiratory issues from their anatomy. Collar pressure can worsen coughs so use a harness instead. Treatment depends on cause: antibiotics for bacterial infections, bronchodilators for asthma, heart medications for cardiac cough.",
+      "tags": ["coughing", "kennel cough", "asthma", "heart disease", "tracheal collapse", "respiratory", "wheezing"],
+      "when_to_see_vet": "Immediately if labored breathing or blue gums. Within 2-3 days for persistent cough or if a puppy or kitten is affected."
+    },
+    {
+      "id": "sym_009",
+      "title": "Skin Itching and Scratching (Pruritus)",
+      "species": ["dog", "cat"],
+      "urgency": "low",
+      "content": "Itching or pruritus is extremely common in pets and has multiple causes. Environmental allergies or atopic dermatitis are caused by pollen, dust mites, and mold. Dogs often lick their paws, rub their face, and scratch their belly and armpits. Food allergies cause year-round itching and often accompany GI symptoms. Flea allergy dermatitis is one of the most common causes of severe itching — just one flea bite can trigger intense itching in sensitive pets. Look for flea dirt which appears as black specks at the base of the tail. Contact allergies can develop from cleaning products, certain plants, or materials. Mange from Demodex or Sarcoptes mites causes severe itching, hair loss, and skin thickening. Hot spots or moist pyoderma are raw weeping skin lesions caused by excessive licking or moisture trapping. Treatment varies: regular flea prevention year-round, elimination diet trials for food allergies lasting 8-12 weeks minimum, vet-approved antihistamines, omega-3 fatty acid supplements, medicated shampoos, and prescription medications such as Apoquel or Cytopoint for severe cases. Secondary bacterial infections from scratching require antibiotics. Bathing with gentle pH-balanced pet shampoo weekly during allergy season helps remove environmental allergens.",
+      "tags": ["itching", "scratching", "allergies", "fleas", "mange", "hot spots", "atopic dermatitis", "skin", "pruritus"],
+      "when_to_see_vet": "If severe or causing skin damage, secondary infections, or does not respond to basic treatment within 1 week"
+    },
+    {
+      "id": "sym_010",
+      "title": "Labored Breathing and Respiratory Distress — Emergency",
+      "species": ["dog", "cat"],
+      "urgency": "emergency",
+      "content": "Labored breathing, open-mouth breathing in cats, rapid shallow breaths, or respiratory distress is a MEDICAL EMERGENCY. Any pet showing significant breathing difficulty needs immediate emergency veterinary care — do not wait. Signs of respiratory distress include: open-mouth breathing in cats which is abnormal, exaggerated chest movements, neck extended to breathe, blue, gray, or white gums and tongue indicating cyanosis, abdominal breathing where the belly heaves with each breath, or paradoxical breathing where the chest goes in while the belly goes out. Common causes include pleural effusion which is fluid in the chest cavity, pneumothorax which is air in the chest, pulmonary edema from fluid in the lungs due to heart failure, severe asthma, pneumonia, foreign body obstruction, severe anemia, diaphragmatic hernia, or toxin exposure. Keep the pet calm, minimize stress, maintain a comfortable position, and do not force them into a carrier if distress worsens. Drive to the nearest emergency animal hospital immediately. Oxygen therapy may be lifesaving. Do not attempt to treat at home. Time is critical — minutes matter with respiratory emergencies. Brachycephalic breeds including Pugs, French Bulldogs, and Persian cats are particularly vulnerable to respiratory emergencies.",
+      "tags": ["breathing difficulty", "labored breathing", "respiratory distress", "emergency", "cyanosis", "open mouth breathing", "blue gums"],
+      "when_to_see_vet": "EMERGENCY — Go immediately to emergency vet hospital, do not wait"
+    },
+    {
+      "id": "sym_011",
+      "title": "Pale or White Gums — Emergency Sign",
+      "species": ["dog", "cat"],
+      "urgency": "emergency",
+      "content": "Gum color is a critical vital sign in pets. Normal pet gums should be pink and moist, similar to bubble gum pink. Pale, white, gray, blue, or yellow gums indicate a potentially life-threatening emergency that requires immediate action. Pale or white gums indicate shock, severe anemia, or internal bleeding, meaning oxygen is not reaching tissues adequately. Common causes of pale gums include: internal bleeding from trauma or a ruptured spleen or tumor, severe anemia from blood loss or red blood cell destruction such as autoimmune hemolytic anemia, toxin ingestion from rodenticides that cause internal bleeding or from onions and garlic that destroy red blood cells, severe infection or sepsis, heart failure, or dehydration with blood pressure collapse. To check capillary refill time: press the gum gently until it turns white, release, and count seconds until pink returns. Normal is 1-2 seconds. A delayed return of more than 2 seconds indicates poor circulation. Any pet with pale gums needs emergency veterinary care immediately. Keep the pet warm and as calm as possible, check for obvious wounds, and do not delay seeking help — this is a life-threatening emergency that cannot wait.",
+      "tags": ["pale gums", "white gums", "anemia", "shock", "internal bleeding", "emergency", "CRT", "gum color"],
+      "when_to_see_vet": "EMERGENCY — Immediate vet or emergency hospital required"
+    },
+    {
+      "id": "sym_012",
+      "title": "Bloated or Distended Abdomen (GDV/Bloat) — Emergency",
+      "species": ["dog"],
+      "urgency": "emergency",
+      "content": "Gastric Dilatation and Volvulus (GDV), also called bloat, is one of the most life-threatening emergencies in dogs. The stomach fills with gas and may twist, cutting off blood supply to surrounding organs. Without emergency surgery, death can occur within hours of onset. GDV predominantly affects large, deep-chested breeds including Great Danes, German Shepherds, Standard Poodles, Dobermans, Irish Setters, and Weimaraners. Signs of bloat include: visibly distended and tight abdomen, unproductive retching or attempting to vomit without producing material, extreme restlessness and anxiety, hunched posture, rapid shallow breathing, pale gums, excessive drooling, and collapse. Risk factors include feeding only once daily so feed 2-3 smaller meals instead, eating too fast so use a slow-feeder bowl, vigorous exercise right before or after meals, stress, and genetic predisposition in certain breeds. Prophylactic gastropexy which is stomach tacking during spay or neuter surgery reduces risk significantly in predisposed breeds and is recommended by many veterinarians for at-risk breeds. If you suspect GDV, treat it as an emergency and go immediately to a 24-hour veterinary emergency facility. Every minute matters. Do not induce vomiting and do not wait to see if it resolves on its own.",
+      "tags": ["bloat", "GDV", "gastric dilatation", "volvulus", "distended abdomen", "emergency", "retching", "large breed"],
+      "when_to_see_vet": "EMERGENCY — Immediately, life-threatening condition that requires surgery"
+    },
+    {
+      "id": "sym_013",
+      "title": "Seizures in Dogs and Cats",
+      "species": ["dog", "cat"],
+      "urgency": "emergency",
+      "content": "A seizure occurs when abnormal electrical activity in the brain causes sudden, uncontrolled body movements. During a seizure, a pet may fall, paddle their legs, twitch, vocalize, urinate, defecate, drool excessively, and appear confused or temporarily blind during the post-ictal phase. First-time seizures or seizures in a pet not previously diagnosed with epilepsy always warrant emergency veterinary evaluation. Common causes include idiopathic epilepsy which has no identifiable cause and is most common in dogs, brain tumors, encephalitis, metabolic causes such as hypoglycemia or liver disease, toxin ingestion including xylitol, certain medications, and insecticides, or trauma to the head. During a seizure: stay calm, do not put hands in the mouth as the pet will not swallow their tongue but will bite reflexively, clear the area of hazards, time the seizure duration, keep the room dark and quiet, and speak softly to reassure your pet. If a seizure lasts more than 3-5 minutes this is called status epilepticus and is an emergency. Multiple seizures in one day are also an emergency situation. After the seizure, the post-ictal phase with confusion, temporary blindness, pacing, and anxiety can last minutes to hours. Video the seizure if it is safe to do so for your veterinarian.",
+      "tags": ["seizure", "epilepsy", "convulsions", "status epilepticus", "emergency", "brain", "trembling", "twitching"],
+      "when_to_see_vet": "EMERGENCY if first seizure, seizure lasting more than 5 minutes, or multiple seizures in one day"
+    },
+    {
+      "id": "sym_014",
+      "title": "Sudden or Unexplained Weight Loss in Pets",
+      "species": ["dog", "cat"],
+      "urgency": "high",
+      "content": "Unintentional weight loss of 10% or more of body weight is medically significant and requires veterinary investigation. In dogs and cats, gradual unexplained weight loss is often a sign of serious underlying disease. Common causes include: diabetes mellitus producing weight loss despite increased appetite, hyperthyroidism in cats producing weight loss with increased appetite, restlessness, and vomiting, cancer which is the most common cause of significant weight loss in older pets, inflammatory bowel disease (IBD), chronic kidney disease, heart disease, liver disease, dental pain making eating difficult, intestinal parasites, or severe stress and anxiety. The combination of weight loss and increased appetite typically suggests diabetes or hyperthyroidism. Weight loss with poor appetite suggests pain, nausea, or serious systemic illness. Track food intake carefully to determine if the pet is eating but losing weight or not eating at all. Note other symptoms such as vomiting, diarrhea, increased thirst, behavioral changes, or changes in hair coat quality. Baseline diagnostics typically include blood work including CBC and chemistry panel, urinalysis, and thyroid testing. Chest and abdominal radiographs or ultrasound may be needed. In cats especially, hyperthyroidism is very treatable once diagnosed and should not be delayed.",
+      "tags": ["weight loss", "cachexia", "hyperthyroidism", "diabetes", "IBD", "cancer", "polyphagia", "kidney disease"],
+      "when_to_see_vet": "Within 1-2 days for any noticeable weight loss lasting more than 1-2 weeks"
+    },
+    {
+      "id": "sym_015",
+      "title": "Eye Discharge and Eye Problems in Pets",
+      "species": ["dog", "cat"],
+      "urgency": "medium",
+      "content": "Eye discharge can range from normal to serious depending on its characteristics. Small amounts of clear discharge in the inner corner of the eye are normal. Watery clear discharge may indicate allergies, dust, or mild irritation. Green or yellow discharge suggests bacterial infection or conjunctivitis and requires veterinary treatment with antibiotic eye drops. Thick white or gray discharge can indicate dry eye or keratoconjunctivitis sicca (KCS), a condition where the eye produces insufficient tears. Chronic brown staining under the eyes or epiphora is common in flat-faced breeds like Pugs and Persians and in Poodles. Cloudy cornea with a milky appearance may indicate a corneal ulcer which is painful and needs prompt treatment. Signs of pain include squinting, pawing at the eye, or keeping the eye closed. Cherry eye or a prolapsed third eyelid gland appears as a red mass in the inner corner of the eye and often requires surgical correction. Sudden blindness or vision changes warrant emergency evaluation. Never use human eye drops unless specifically prescribed by your vet for your specific pet. A fluorescein stain test at the veterinary clinic quickly identifies corneal ulcers. Brachycephalic breeds are more prone to eye injuries because their eyes protrude more than in other breeds.",
+      "tags": ["eye discharge", "conjunctivitis", "cherry eye", "dry eye", "corneal ulcer", "cloudy eye", "squinting", "eye problems"],
+      "when_to_see_vet": "Within 24-48 hours for discharge, immediately if eye injury, vision loss, or extreme pain"
+    }
+  ]
+}

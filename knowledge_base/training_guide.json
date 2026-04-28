@@ -1,0 +1,99 @@
+{
+  "metadata": {
+    "version": "1.0",
+    "category": "training",
+    "description": "Dog training methods, schedules, and behavioral guidance using positive reinforcement science"
+  },
+  "entries": [
+    {
+      "id": "trn_001",
+      "title": "8-Week Progressive Puppy Training Program Schedule",
+      "species": ["dog"],
+      "urgency": "low",
+      "content": "A structured 8-week puppy training plan creates confident, well-mannered adult dogs and sets the foundation for a lifetime of good behavior. Week 1-2: Focus on name recognition, basic recall in a safe enclosed space, sit, and handling exercises including touching paws, ears, and mouth which is essential for future grooming and veterinary visits. Sessions should be only 3-5 minutes long and repeated 2-3 times daily since puppies have extremely short attention spans and tire quickly. Week 3-4: Add stay with a duration of 3 seconds building gradually to 10 seconds, down position, leave it, loose-leash walking introduction, and basic crate training. Week 5-6: Continue building duration on stays, add distance to recall, introduce heel position, and practice all learned commands in new locations since generalization is critical as puppies must learn that commands apply everywhere not just at home. Week 7-8: Proofing all commands with mild distractions present, beginning socialization outings to pet-friendly stores and parks, greeting strangers politely without jumping, and riding calmly in the car. Use tiny high-value treats for training such as small pieces of cooked chicken, cheese, or commercial training treats. Reward within 1-2 seconds of desired behavior for maximum effect. End every single session with a success to build confidence. Use a marker word such as yes or a clicker to precisely mark the exact moment of correct behavior. Never punish puppies during training as it damages the human-animal bond and significantly slows learning.",
+      "tags": ["puppy training", "8 week program", "training schedule", "basic commands", "training sessions", "positive reinforcement", "clicker"],
+      "when_to_see_vet": "Not applicable; consult a CPDT-KA certified trainer for specific behavioral issues"
+    },
+    {
+      "id": "trn_002",
+      "title": "Teaching Sit, Stay, and Down Commands Step by Step",
+      "species": ["dog"],
+      "urgency": "low",
+      "content": "Teaching the foundational commands of sit, stay, and down provides the building blocks for all other training. For sit: hold a treat at the dog's nose level and slowly move your hand up and back over the head. The dog's rear will lower naturally as the head comes up. The instant the rear touches the ground, say the word sit, mark with yes or a clicker, and give the treat. Practice 5-10 short repetitions. Most dogs reliably learn sit within 2-3 short sessions. For stay: begin from a solid sit. Take one step backward then immediately step forward again and reward. Gradually increase duration from 1 second to 3 seconds to 10 seconds and then to longer periods. Also gradually increase distance. Always return to the dog to release rather than calling them to you, since this teaches that stay means do not move until I come back to release you. Use a consistent release word such as free, okay, or release. For down: lure from the sit position by moving the treat from the dog's nose directly toward the ground between the front paws. Some dogs resist the down position because it feels vulnerable so be extra patient and reward any downward movement initially. Mark and reward immediately when both elbows touch the ground. Building reliability requires practicing in different locations, with varying distractions, and at different times of day. Use commands before meals by asking for a sit or down before placing the food bowl to practice daily in real-life situations.",
+      "tags": ["sit", "stay", "down", "basic commands", "obedience", "positive reinforcement", "luring", "generalization", "training"],
+      "when_to_see_vet": "Not applicable; contact a CPDT-KA certified trainer for help"
+    },
+    {
+      "id": "trn_003",
+      "title": "Reliable Recall Training — Teaching a Life-Saving Come Command",
+      "species": ["dog"],
+      "urgency": "low",
+      "content": "A reliable recall or come when called command is the single most important safety skill for any dog and could save their life in an emergency situation near traffic or danger. The cardinal rule of recall training: never punish a dog for coming to you under any circumstances, even if they took a very long time. Punishing the dog for eventually returning poisons the recall response and makes the dog less likely to return in the future. Never call your dog to do something they dislike such as a bath, nail trim, or going into the crate. Go get them for unpleasant things instead. Teaching recall: start in a very small enclosed space with zero distractions. Say the dog's name followed by come in a genuinely happy and excited voice. Run backwards enthusiastically since dogs naturally want to chase movement. When the dog arrives, mark with a big enthusiastic YES and give a jackpot of multiple treats while celebrating. Practice puppy ping-pong with two people calling the dog back and forth. Use a 15-30 foot long line in larger outdoor spaces for safety during practice. Never allow the dog off-leash until recall is 90% reliable or better across many different environments with moderate distractions. Save your absolute highest value treats specifically for recall practice and do not use them for anything else so recall becomes the most rewarding thing in your dog's life. Consider GPS tracking as a backup safety measure for dogs with a history of running.",
+      "tags": ["recall", "come command", "off-leash", "safety", "recall training", "positive reinforcement", "long line", "reliable recall"],
+      "when_to_see_vet": "Not applicable; work with a certified trainer if recall has broken down"
+    },
+    {
+      "id": "trn_004",
+      "title": "Crate Training Guide for Puppies and Adult Dogs",
+      "species": ["dog"],
+      "urgency": "low",
+      "content": "The crate is an invaluable tool when introduced gradually and positively, eventually becoming a safe den where your dog chooses to rest voluntarily. The most important rule: never use the crate as punishment as this creates negative associations that undermine the entire crate training process. Choosing the right size crate: the dog should be able to stand up fully, turn around completely, and lie down in a natural position. A crate that is too large allows the dog to eliminate in one corner and sleep in another, which undermines house training since dogs instinctively avoid soiling their sleeping area. Use a divider panel for growing puppies to make the crate smaller initially and expand it as the dog grows. Introduction process: days 1-2, place treats and toys inside with the door open and let the dog go in and out freely without closing the door. Days 3-4, begin closing the door briefly for 30 seconds while the dog is eating inside then immediately open it. Days 5-7, gradually increase closed duration while the dog remains calm. Feed all meals inside the crate to build strong positive associations. For the first night, place the crate in the bedroom so the puppy can hear and smell you. Maximum recommended crating times by age: 8-12 weeks is 1-2 hours maximum, 3-4 months is 3-4 hours, and 5 months and older is a maximum of 4-5 hours. Adult dogs should not be crated more than 8 hours in any 24-hour period.",
+      "tags": ["crate training", "crate", "house training", "puppy", "den", "safe space", "confinement", "schedule"],
+      "when_to_see_vet": "Not applicable; consult a trainer if dog shows extreme anxiety in the crate"
+    },
+    {
+      "id": "trn_005",
+      "title": "House Training and Potty Training Your Puppy",
+      "species": ["dog"],
+      "urgency": "low",
+      "content": "Successful house training rests on three foundational principles: take the dog outside frequently, supervise constantly when inside the home, and confine safely when supervision is not possible. Puppies under 12 weeks of age have very limited voluntary bladder control so they need to go outside every 30-60 minutes during waking hours, immediately after waking from any sleep, after eating or drinking, after play sessions, and before bedtime. From 12 weeks onward, puppies can generally hold it for roughly one hour per month of age up to about 4-5 hours. A recommended daily schedule: take outside first thing in the morning, after every meal and nap, every 2-3 hours throughout the day, and as the last activity before bedtime. Always take to the same outdoor spot since the residual scent cues help trigger elimination. Say a chosen cue word such as outside or potty as you walk to the spot. When the dog eliminates outside, immediately mark with praise and reward with a treat while still outdoors. Do not wait until you are back inside as the reward must be immediate to be effective. For accidents inside: clean thoroughly with an enzymatic cleaner since ammonia-based products smell like urine to dogs and attract them back. If caught in the act, calmly interrupt without punishment and take outside immediately. Never punish after the fact since dogs cannot connect punishment to something that happened even 2 minutes earlier. Most puppies are reliably house-trained by 4-6 months with consistent management.",
+      "tags": ["house training", "potty training", "accident", "bathroom schedule", "supervision", "enzymatic cleaner", "cue word"],
+      "when_to_see_vet": "Rule out medical causes if a previously house-trained adult dog begins having sudden accidents"
+    },
+    {
+      "id": "trn_006",
+      "title": "Leash Training and Teaching Loose-Leash Walking",
+      "species": ["dog"],
+      "urgency": "low",
+      "content": "Loose-leash walking means the dog moves forward with the leash slack without pulling, making walks pleasant for both dog and owner. The fundamental problem with leash pulling is that it works for the dog since pulling forward means getting where they want to go faster. To change this, walking must stop when pulling starts. The be-a-tree method: when the dog begins to pull, stop completely and stand still like a tree. Do not move forward at all. Wait for any slack in the leash. The instant slack appears, mark with yes and reward then proceed forward. This feels slow initially but dogs learn quickly that pulling makes the walk stop entirely. The change-of-direction method: when the dog starts to pull, turn and walk in the opposite direction. The dog must follow you and learns to watch where you are going. Recommended equipment includes front-clip harnesses such as the Easy Walk or Freedom Harness and head halters such as the Gentle Leader or Halti which make pulling uncomfortable and reduce leverage without pain. Avoid prong collars, choke chains, and shock collars as these cause pain and fear and damage the trust between dog and owner. Teaching heel position: teach the dog to target your hand with their nose then use this to lure the dog into position beside your leg. Mark and reward for walking in position. Loose-leash walking requires weeks to months of consistent daily practice. Begin in low-distraction environments and gradually add more distractions as the dog improves.",
+      "tags": ["leash training", "loose leash walking", "pulling", "heel", "front clip harness", "walking", "obedience", "leash manners"],
+      "when_to_see_vet": "Not applicable; work with a certified trainer for persistent leash reactivity or pulling"
+    },
+    {
+      "id": "trn_007",
+      "title": "Positive Reinforcement Training — Science and Core Principles",
+      "species": ["dog"],
+      "urgency": "low",
+      "content": "Positive reinforcement or R+ is the scientific, effective, and humane foundation of modern dog training supported by decades of behavioral science research. The four quadrants of operant conditioning: Positive Reinforcement adds something the dog wants to increase the frequency of a behavior. Negative Reinforcement removes something unpleasant to increase behavior. Positive Punishment adds something unpleasant to decrease behavior. Negative Punishment removes something pleasant to decrease behavior. The science is clear that R+ produces faster learning with better retention, a more confident and happy dog, and a stronger human-animal bond compared to punishment-based methods. Timing is absolutely critical in R+ training since the reward must be delivered within 1-2 seconds of the desired behavior for the dog to make the connection. A marker such as the verbal word yes or a click from a clicker bridges the gap between the behavior and the delivery of the reward. Use high-value reinforcers such as tiny pieces of real meat for difficult behaviors and distracting environments. Reinforcement schedules matter significantly: continuous reinforcement where every correct behavior is rewarded is best for teaching new behaviors. Variable reinforcement where rewards come unpredictably is best for maintaining already learned behaviors since it creates high persistence similar to a slot machine effect. The three Ds of training are Duration, Distance, and Distraction. The key rule: only increase one D at a time and never skip steps. If the dog fails more than 20% of the time, the criteria are too high and difficulty should be reduced.",
+      "tags": ["positive reinforcement", "R+", "operant conditioning", "training science", "reward", "marker training", "variable reinforcement"],
+      "when_to_see_vet": "Consult a CPDT-KA certified trainer or veterinary behaviorist for complex behavioral issues"
+    },
+    {
+      "id": "trn_008",
+      "title": "Managing and Reducing Excessive Dog Barking",
+      "species": ["dog"],
+      "urgency": "low",
+      "content": "Understanding why your dog barks is the essential first step to addressing it effectively since different causes require very different solutions. Types and causes of barking: alert and alarm barking occurs when the dog detects something in the environment such as the doorbell or a passerby. Demand barking occurs when the dog wants something such as attention, food, or play. Boredom and frustration barking occurs in under-stimulated dogs. Anxiety barking occurs with separation anxiety or fear. Territorial barking occurs when the dog guards their property. Solutions by type: for alert barking, acknowledge the alert verbally with something like thank you, enough, then block visual access to the trigger using frosted window film or remove the dog from the window. For demand barking, completely ignore the behavior and only reward quiet, since giving in even once reinforces the pattern. For counter-conditioning, pair the trigger with something positive such as every person walking by equals a treat. To teach the quiet command: let the dog bark 2-3 times, say quiet calmly, wait for a 2 second pause, mark and immediately reward. Gradually build the duration of required quiet. For boredom barking: increase both physical exercise and mental stimulation through puzzle toys, sniff walks, and food-dispensing toys. For separation anxiety barking which requires systematic desensitization: consult a professional as this cannot be effectively fixed with punishment and often requires medication. What absolutely not to do: yelling at the dog teaches them you are barking along with them, and shock bark collars cause pain and fear without addressing root causes.",
+      "tags": ["barking", "excessive barking", "quiet command", "counter-conditioning", "alert barking", "demand barking", "separation anxiety"],
+      "when_to_see_vet": "Consult veterinary behaviorist if barking stems from separation anxiety or severe anxiety disorders"
+    },
+    {
+      "id": "trn_009",
+      "title": "Teaching Leave It and Drop It — Critical Safety Commands",
+      "species": ["dog"],
+      "urgency": "low",
+      "content": "Leave it means do not touch that object and drop it means release what is currently in your mouth. Both commands can save your dog's life by preventing ingestion of toxic foods, dangerous objects, or wildlife. Teaching leave it in four progressive levels: Level 1 with the hand, place a treat in your closed fist. When the dog stops trying to get it and pulls away even slightly, mark yes and reward from the other hand not the one with the treat. Repeat until the dog immediately pulls away. Level 2 with the floor, place a treat on the floor and cover it with your foot. When the dog backs away from your foot, mark and reward from a separate treat. Level 3 with an uncovered object, place the treat without covering it and reward before the dog takes it. Level 4 for real life, practice with real objects and in the environment on walks. The critical principle: always reward with something different from and better than the thing you are asking the dog to leave. You are teaching that leaving something always results in getting something better. Teaching drop it: play with two toys of equal value. When the dog has toy one in their mouth, excitedly present toy two. The moment they drop toy one, say drop it, mark, and play enthusiastically with toy two. Then offer toy one back. Always give something back after asking for a drop so the dog learns that releasing objects always results in a fair trade and never just a loss.",
+      "tags": ["leave it", "drop it", "resource guarding", "impulse control", "safety commands", "training", "trading"],
+      "when_to_see_vet": "Not applicable; work with trainer if resource guarding is present alongside drop it reluctance"
+    },
+    {
+      "id": "trn_010",
+      "title": "Critical Puppy Socialization Window Ages 8-16 Weeks",
+      "species": ["dog"],
+      "urgency": "medium",
+      "content": "The socialization window is approximately 3-14 weeks with the most critical period and the secondary window extends to 16 weeks. This is the developmental stage when puppies most readily and permanently form neutral or positive associations with novel stimuli they encounter. Experiences during this window shape the dog's temperament, fearfulness, and social behavior for the rest of their life. Missing adequate socialization during this period is a leading cause of fear, anxiety, and aggression in adult dogs and is very difficult to fully overcome later. What to proactively socialize puppies to: diverse people including men, women, children, elderly people, and people with hats, glasses, uniforms, and beards; other animals including vaccinated gentle dogs, cats, and other pets; varied environments including cars, different flooring surfaces, stairs, parks, and city sounds; different sounds including thunderstorms, fireworks, vacuum cleaners, traffic, and crowds; and handling exercises including touching all paws, ears, mouth, and tail which are areas a vet and groomer will need to access. How to socialize properly: always pair new exposures with treats and positive experiences. If the puppy shows signs of fear such as trembling, cowering, or trying to flee, reduce the intensity of the exposure immediately and build positive associations at a lower level before progressing. The goal is a neutral to happy emotional response not merely forced tolerance. The American Veterinary Society of Animal Behavior (AVSAB) states that the benefits of early socialization outweigh the risk of disease exposure before vaccinations are complete.",
+      "tags": ["socialization", "puppy", "socialization window", "fear prevention", "positive association", "puppy class", "AVSAB", "critical period", "temperament"],
+      "when_to_see_vet": "Discuss appropriate timing for classes and outings given vaccination status at the 8-week puppy visit"
+    }
+  ]
+}

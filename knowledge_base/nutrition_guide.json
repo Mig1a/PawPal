@@ -1,0 +1,99 @@
+{
+  "metadata": {
+    "version": "1.0",
+    "category": "nutrition",
+    "description": "Pet nutrition guidance including feeding schedules, portion sizes, dietary requirements, and foods to avoid"
+  },
+  "entries": [
+    {
+      "id": "nut_001",
+      "title": "Adult Dog Nutrition and Feeding Guidelines",
+      "species": ["dog"],
+      "urgency": "low",
+      "content": "Adult dogs aged 1-7 years depending on breed require a balanced diet providing protein, fats, carbohydrates, vitamins, and minerals. Choose a food labeled complete and balanced by AAFCO for adult maintenance or all life stages. Protein should be the first ingredient with named meat sources such as chicken, beef, or salmon rather than generic meat by-products. Most adult dogs do well fed twice daily in the morning and evening rather than free-feeding. Meal feeding helps with portion control and makes it easier to monitor appetite changes. Portion sizes vary significantly by breed, size, and activity level. Follow label guidelines as a starting point then adjust based on body condition score. You should be able to feel your dog's ribs easily but not see them which corresponds to a body condition score of 4-5 out of 9. Small breeds under 20 lbs typically need 1/4 to 1.5 cups per day. Medium breeds of 20-50 lbs need 1.5 to 2.5 cups per day. Large breeds of 50-100 lbs need 2 to 4 cups per day. Giant breeds may need specialty large-breed formulas with controlled calcium and phosphorus for bone health. High-activity working or sporting dogs need 20-40% more calories than their sedentary counterparts. Always provide fresh clean water and transition between foods gradually over 7-10 days to prevent gastrointestinal upset.",
+      "tags": ["adult dog", "feeding", "portions", "nutrition", "AAFCO", "protein", "body condition", "meal feeding"],
+      "when_to_see_vet": "Annual wellness exams include nutrition counseling and body condition assessment"
+    },
+    {
+      "id": "nut_002",
+      "title": "Puppy Nutrition and Feeding Schedule by Age",
+      "species": ["dog"],
+      "urgency": "low",
+      "content": "Puppies have significantly higher caloric and nutritional needs than adult dogs due to rapid growth and development. Feed a food specifically formulated for puppies or all life stages — not adult formulas which may be deficient in nutrients needed for proper growth. Large and giant breed puppies specifically need large-breed puppy formulas that are lower in calcium and phosphorus to prevent developmental orthopedic diseases. Recommended feeding frequency by age: at 8-12 weeks feed 3-4 meals per day; from 3-6 months feed 3 meals per day; from 6-12 months feed 2 meals per day. At 12 months for small and medium breeds and 18-24 months for large breeds, transition to adult food. For an 8-week puppy, feed approximately 3-4 small meals of high-quality puppy kibble moistened slightly with warm water. Measure portions carefully because puppies can overeat and grow too fast which stresses developing joints. Monitor body condition weekly in fast-growing large breeds. Free-choice feeding is not recommended except for very young puppies under 8 weeks of age. Never feed adult dog food or table scraps to puppies as a regular diet. Calcium supplementation is dangerous in puppies already eating a complete diet and can cause serious skeletal deformities. DHA omega-3 fatty acid supports brain and vision development and should be found in quality puppy formulas.",
+      "tags": ["puppy", "feeding schedule", "puppy food", "large breed puppy", "DHA", "growth", "meal frequency", "nutrition"],
+      "when_to_see_vet": "Puppy wellness visits at 8, 12, and 16 weeks include nutrition guidance and growth monitoring"
+    },
+    {
+      "id": "nut_003",
+      "title": "Senior Dog Nutritional Needs and Dietary Changes",
+      "species": ["dog"],
+      "urgency": "low",
+      "content": "Senior dogs which are typically 7 or more years for small and medium breeds and 5-6 or more years for large breeds have changing nutritional needs that should be addressed proactively. Many senior dogs benefit from: reduced-calorie diets if metabolism slows and activity decreases to prevent obesity, higher-quality protein to maintain muscle mass since contrary to popular myth healthy senior dogs generally need as much or more protein than adult dogs, joint-supporting supplements such as glucosamine, chondroitin, and omega-3 fatty acids, increased fiber for digestive health, and reduced sodium if heart disease is present. Senior pets commonly experience weight gain from reduced activity requiring caloric reduction, weight loss from dental disease or organ failure requiring caloric increase and high-quality protein, dental disease making dry food difficult to chew, and cognitive dysfunction that benefits from antioxidant-rich diets. Omega-3 fatty acids including EPA and DHA reduce inflammation, support joints and cognitive function, and benefit heart and kidney health. Evidence-based prescription diets are available for specific conditions including kidney disease, heart disease, diabetes, and joint disease. Assess body condition monthly. Senior pets need more frequent wellness exams every 6 months and periodic bloodwork to catch early organ changes before they become serious.",
+      "tags": ["senior dog", "older dog", "senior nutrition", "glucosamine", "omega-3", "weight management", "dental", "joint health"],
+      "when_to_see_vet": "Every 6 months for senior wellness exams with nutritional assessment and bloodwork"
+    },
+    {
+      "id": "nut_004",
+      "title": "Adult Cat Nutrition and Feeding Requirements",
+      "species": ["cat"],
+      "urgency": "low",
+      "content": "Cats are obligate carnivores with unique nutritional needs that differ significantly from dogs. They require high protein at a minimum of 26% dry matter, moderate fat, and low carbohydrates. Cats cannot synthesize taurine and must obtain it from animal protein. Taurine deficiency causes dilated cardiomyopathy which is heart disease and retinal degeneration leading to blindness. Similarly, cats require arachidonic acid, vitamin A in its pre-formed state, and niacin from animal sources. Cats do poorly on plant-based or vegetarian diets and can develop serious nutritional deficiencies. Wet food is highly recommended for cats because cats have a naturally low thirst drive and historically obtained most hydration from prey since they evolved in desert environments. High moisture intake from wet food helps prevent lower urinary tract disease, bladder crystals and blockages which are life-threatening in male cats, and kidney disease. Wet food is generally higher in protein and lower in carbohydrates than dry food. Feed adult cats 2-3 measured meals per day rather than free-feeding because free-feeding commonly leads to obesity in indoor cats. The average indoor cat needs approximately 200 calories per day. Fresh water should be available in multiple locations and many cats prefer moving water from a fountain.",
+      "tags": ["adult cat", "cat nutrition", "wet food", "taurine", "obligate carnivore", "feeding", "protein", "urinary health"],
+      "when_to_see_vet": "Annual wellness exam with body condition and nutrition assessment"
+    },
+    {
+      "id": "nut_005",
+      "title": "Kitten Nutrition and Feeding from Weaning to 12 Months",
+      "species": ["cat"],
+      "urgency": "low",
+      "content": "Kittens from weaning at approximately 4 weeks to 12 months of age have very high energy and protein needs for rapid growth and development of all body systems. Feed kittens food specifically formulated for kittens or all life stages since adult cat food is insufficient in calories, protein, and key nutrients for growing kittens. Kittens have small stomachs and need frequent feeding: 4-6 meals per day for kittens under 12 weeks, 3-4 meals per day from 3-6 months, and 2-3 meals per day from 6-12 months. Wet food is especially important for kittens to establish good hydration habits that will benefit urinary tract health throughout life. DHA omega-3 fatty acid supports healthy brain and vision development and should be present in quality kitten formulas. Foods to avoid for kittens: adult cat food which is too low in calories and key nutrients, dog food which is critically deficient in taurine and other cat-specific nutrients, and cow's milk which causes diarrhea in most cats due to lactose intolerance. By 12 months, gradually transition to adult cat formula over 7-10 days by mixing increasing proportions of adult food with decreasing kitten food. Kitten wellness visits at 8, 12, and 16 weeks are critical for vaccines, parasite screening, and nutrition guidance from your veterinarian.",
+      "tags": ["kitten", "kitten food", "kitten nutrition", "feeding frequency", "DHA", "growth", "kitten formula", "wet food"],
+      "when_to_see_vet": "Kitten series veterinary appointments at 8, 12, and 16 weeks are essential"
+    },
+    {
+      "id": "nut_006",
+      "title": "Foods Toxic to Dogs — Complete Safety Guide",
+      "species": ["dog"],
+      "urgency": "emergency",
+      "content": "Many common human foods are toxic to dogs and should never be given intentionally or left accessible. Xylitol is found in sugar-free gum, candy, many peanut butters, dental products, and baked goods and causes severe hypoglycemia and liver failure in dogs. Even small amounts can be fatal and this is one of the most dangerous toxins. Grapes and raisins including all varieties cause acute kidney failure in dogs and no safe amount has been established so all exposure should be treated as an emergency. Chocolate contains theobromine and caffeine with dark chocolate and baking chocolate being the most toxic. Symptoms include vomiting, diarrhea, tremors, seizures, and can be fatal. Macadamia nuts cause weakness, vomiting, tremors, and hyperthermia within 12 hours. Onions, garlic, leeks, and chives in all forms including cooked, raw, or powdered destroy red blood cells causing anemia with garlic being 5 times more potent than onion. Alcohol causes rapid intoxication, metabolic disruption, seizures, and death even in small amounts. Caffeine from coffee, tea, and energy drinks causes cardiac arrhythmias and seizures. Avocado contains persin in the flesh and skin causing vomiting and diarrhea. Raw yeast dough expands in the stomach and produces alcohol as it ferments. Cooked plain chicken, carrots, blueberries, plain rice, and plain pumpkin are generally safe treats. If your dog ingests any toxic food, call the ASPCA Animal Poison Control Center at 888-426-4435 immediately.",
+      "tags": ["toxic foods", "dogs", "xylitol", "grapes", "chocolate", "onions", "garlic", "poisoning", "ASPCA", "macadamia"],
+      "when_to_see_vet": "EMERGENCY if any toxic food ingested — call ASPCA Poison Control (888-426-4435) immediately"
+    },
+    {
+      "id": "nut_007",
+      "title": "Foods Toxic to Cats — Safety Reference",
+      "species": ["cat"],
+      "urgency": "emergency",
+      "content": "Cats are highly sensitive to many toxins partly because their liver lacks certain detoxification enzymes present in other species. Onions, garlic, leeks, and chives in all forms including raw, cooked, and powdered cause hemolytic anemia by destroying red blood cells, and even small amounts of garlic powder can be dangerous to cats. Xylitol causes severe hypoglycemia and is potentially fatal even in small doses. Grapes and raisins should be avoided even though the toxic mechanism in cats is not fully documented. Alcohol in any amount including vanilla extract and fermented foods can cause severe metabolic disturbances, coma, and death. Caffeine from coffee, tea, energy drinks, and chocolate causes cardiac arrhythmias, tremors, and seizures. Chocolate is toxic due to theobromine and caffeine, though most cats are not drawn to sweets so exposure is less common than in dogs. Raw fish contains thiaminase which destroys thiamine or Vitamin B1 causing neurological disease if fed regularly. Liver fed excessively causes Vitamin A toxicity leading to bone deformities and joint pain. Dog food is severely deficient in taurine and arachidonic acid and causes heart disease and blindness if fed as the primary diet long-term. Human NSAIDs such as ibuprofen and aspirin cause kidney failure and gastrointestinal ulcers in cats. Acetaminophen or Tylenol is extremely toxic to cats and causes methemoglobinemia and liver failure even in very small doses. Never give any human medication to a cat without explicit veterinary guidance.",
+      "tags": ["toxic foods", "cats", "onions", "garlic", "caffeine", "xylitol", "aspirin", "tylenol", "poisoning", "thiamine"],
+      "when_to_see_vet": "EMERGENCY if any toxic food ingested — call ASPCA Poison Control (888-426-4435) immediately"
+    },
+    {
+      "id": "nut_008",
+      "title": "Healthy Pet Treats and Portion Control for Dogs and Cats",
+      "species": ["dog", "cat"],
+      "urgency": "low",
+      "content": "Treats are important for training and bonding but should not exceed 10% of daily caloric intake to maintain nutritional balance and healthy weight. Exceeding this leads to nutritional imbalance and weight gain over time. Safe and healthy dog treats include plain cooked chicken or turkey without seasonings, small pieces of carrot, apple pieces without seeds since apple seeds contain trace amounts of cyanide, blueberries, banana, green beans, plain cooked eggs, cucumber, watermelon without rind or seeds, and plain cooked sweet potato. Safe cat treats include small pieces of plain cooked fish such as salmon or tuna in moderation, plain cooked chicken, and small amounts of commercial cat treats formulated for cats. For training sessions, use tiny pea-sized treats to keep calorie counts low while still rewarding frequently throughout the session. Dental treats approved by the Veterinary Oral Health Council (VOHC) provide measurable benefit for oral hygiene and help reduce tartar. Avoid high-calorie treats, treats with artificial preservatives such as BHA, BHT, or ethoxyquin, by-products as the main ingredient, or any human food snacks not confirmed safe for pets. For weight-conscious pets, vegetables such as carrots and green beans are excellent low-calorie training rewards. Always count treats as part of the daily caloric budget to prevent overfeeding.",
+      "tags": ["treats", "snacks", "safe foods", "healthy treats", "portion control", "training treats", "dental treats", "calories"],
+      "when_to_see_vet": "Ask vet about low-calorie options and total caloric needs if treating frequently for training"
+    },
+    {
+      "id": "nut_009",
+      "title": "Managing Pet Obesity and Achieving Healthy Weight Loss",
+      "species": ["dog", "cat"],
+      "urgency": "medium",
+      "content": "Obesity is the most common preventable disease in companion animals with approximately 56% of dogs and 60% of cats in the United States overweight or obese. Even 10-20% excess body weight significantly increases risk of diabetes, orthopedic disease, respiratory issues, reduced lifespan, and decreased quality of life. Body Condition Score assessment: at ideal weight of BCS 4-5 out of 9, you should easily feel ribs without a heavy fat layer, see a waist when viewed from above, and see an abdominal tuck when viewed from the side. For dogs, a healthy weight loss strategy involves reducing daily calories by 20-30% using the same diet or switching to a weight management formula, feeding measured meals rather than free-feeding, reducing treats to less than 5% of total daily calories, and increasing exercise gradually while weighing monthly. For cats, gradually reduce calories by a maximum of 20% since never starving cats due to hepatic lipidosis risk. Increase protein content by switching to wet food, increase environmental enrichment to encourage movement, and use puzzle feeders to slow eating and increase mental engagement. Target weight loss of 1-2% of body weight per week is safe and sustainable. Prescription weight loss diets can be very effective when portion-controlled. Routine weigh-ins at the vet or at home keep the weight loss program accountable and allow adjustments.",
+      "tags": ["obesity", "overweight", "weight loss", "body condition score", "BCS", "diet", "weight management", "calorie restriction"],
+      "when_to_see_vet": "Recommend professional guidance for weight loss in pets more than 15-20% above ideal body weight"
+    },
+    {
+      "id": "nut_010",
+      "title": "Pet Hydration and Water Requirements",
+      "species": ["dog", "cat"],
+      "urgency": "low",
+      "content": "Water is the most essential nutrient for pets and inadequate hydration impairs kidney function, disrupts electrolytes, reduces organ performance, and can be life-threatening. General guidelines for daily water intake: dogs need approximately 1 ounce of water per pound of body weight per day, so a 50 pound dog needs approximately 50 ounces. Cats need approximately 4 ounces or half a cup per 5 pounds of body weight, but cats have a naturally low thirst drive and tend to drink less than dogs relative to their size and needs. Signs of dehydration include skin tenting where the skin does not snap back when gently pinched, dry or tacky gums, sunken eyes, lethargy, and dark concentrated urine. Cats and wet food are closely connected because cats evolved in desert environments and historically obtained most of their hydration from their prey. Cats fed exclusively dry food have chronically elevated urine concentration which increases risk of urinary crystals, bladder blockages that are life-threatening in male cats, and kidney disease over the long term. Wet food provides 70-80% water content compared to just 10% in dry food making it much more beneficial for urinary and kidney health. To encourage water intake: use wide shallow bowls since cats dislike whisker fatigue from deep bowls, clean bowls daily to remove bacteria that deter drinking, try a pet water fountain since many cats prefer moving water, and place multiple water stations around the home.",
+      "tags": ["hydration", "water", "dehydration", "drinking", "water intake", "wet food", "urinary health", "kidney health", "water fountain"],
+      "when_to_see_vet": "If dehydration signs are present or pet is drinking significantly more or less water than usual"
+    }
+  ]
+}

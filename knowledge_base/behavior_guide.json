@@ -1,0 +1,117 @@
+{
+  "metadata": {
+    "version": "1.0",
+    "category": "behavior",
+    "description": "Explanations of common dog and cat behaviors, body language, and behavioral patterns"
+  },
+  "entries": [
+    {
+      "id": "beh_001",
+      "title": "Why Do Dogs Eat Grass?",
+      "species": ["dog"],
+      "urgency": "low",
+      "content": "Grass eating is one of the most common behaviors dogs exhibit and it is generally considered normal. There are several proposed reasons why dogs eat grass. The self-medication theory suggests dogs instinctively eat grass to induce vomiting when they feel nauseated or have an upset stomach, though research shows only about 25% of grass-eating dogs vomit afterward. The fiber hypothesis suggests dogs eat grass to add fiber to their diet and aid digestion or address intestinal parasites. A behavioral explanation is simple boredom, curiosity, or enjoyment of the taste and texture of grass. Some dogs may eat grass out of nutritional deficiency though this is less common in pets fed complete commercial diets. From an evolutionary standpoint, wolves and wild canids regularly consume plant material from prey animals' stomachs. When is grass eating a concern? If your dog is eating grass obsessively, seems anxious or distressed before eating grass, or consistently vomits after eating grass, consult your veterinarian to rule out gastrointestinal disease. Ensure your lawn is not treated with pesticides, herbicides, or fertilizers before letting your dog graze. Wild mushrooms and toxic plants in the yard are also concerns. In general, occasional grass eating in an otherwise healthy, well-nourished dog with normal stools is not cause for alarm.",
+      "tags": ["grass eating", "normal behavior", "vomiting", "self-medication", "boredom", "GI upset", "nutrition"],
+      "when_to_see_vet": "If grass eating is obsessive, associated with significant vomiting, or accompanied by other GI symptoms"
+    },
+    {
+      "id": "beh_002",
+      "title": "Dog Body Language Guide — Reading Your Dog's Signals",
+      "species": ["dog"],
+      "urgency": "low",
+      "content": "Understanding canine body language is essential for safe interactions and preventing bites. Dogs communicate primarily through posture, tail position, facial expressions, and vocalizations. Relaxed and happy dog: loose wiggly body, tail wagging loosely at mid-height or lower, relaxed face with soft eyes, mouth slightly open. Playful dog: play bow with front end lowered and rear end up, bouncy movement, tail wagging, bright eyes. Fearful or anxious dog: tail tucked, ears back and flat, crouching or cowering, yawning (stress signal), licking lips, avoiding eye contact, showing whites of eyes called whale eye. Submissive dog: rolling onto back, urinating submissively, averting gaze, making body small. Stressed dog: yawning when not tired, lip licking, turning away, moving slowly, shaking off tension. Dominant or confident dog: tall posture, ears forward, tail high, stiff movement. Aggressive warning signals: stiff body, hard stare, tail held high or stiff, hackles raised, lips pulled back showing teeth, low growl. Important: never punish a growl as it is a warning signal. A dog that has been punished for growling may bite without warning. Recognizing stress signals early prevents escalation. Children should always be supervised with dogs and taught to recognize warning signs.",
+      "tags": ["body language", "communication", "tail wagging", "fear", "aggression", "play bow", "whale eye", "signals"],
+      "when_to_see_vet": "Consult veterinary behaviorist if dog shows frequent aggression or extreme fear responses"
+    },
+    {
+      "id": "beh_003",
+      "title": "Dog Separation Anxiety — Causes and Management",
+      "species": ["dog"],
+      "urgency": "medium",
+      "content": "Separation anxiety is a serious behavioral condition where dogs experience extreme distress when left alone or separated from their attachment figure. It affects approximately 14-20% of dogs and is one of the most common behavior problems requiring professional intervention. Signs of separation anxiety include destructive behavior when alone such as chewing furniture or scratching doors, excessive vocalization including howling and barking that neighbors can hear, inappropriate elimination in the house, attempts to escape that may cause self-injury, excessive salivation or drooling, and refusal to eat when alone. Distinction from normal behavior: some dogs are simply undertrained or bored. True separation anxiety involves panic-like distress regardless of exercise level or enrichment provided. Causes include rescue dogs with abandonment history, sudden schedule changes, loss of a companion pet or person, lack of socialization and independence training as a puppy, and genetic predisposition. Management approaches: desensitization involves gradually increasing alone time starting with seconds and building to hours over weeks or months. This requires patience and consistency. Counterconditioning pairs departures with positive experiences like special treat-stuffed Kongs. Medications from your veterinarian such as fluoxetine or trazodone can significantly help moderate to severe cases when used alongside behavioral modification. Do not use punishment as it worsens anxiety. Consult a veterinary behaviorist for severe cases.",
+      "tags": ["separation anxiety", "alone time", "destructive behavior", "vocalization", "anxiety", "desensitization", "medication"],
+      "when_to_see_vet": "Consult vet or veterinary behaviorist; medication combined with behavior modification is often needed"
+    },
+    {
+      "id": "beh_004",
+      "title": "Dog Zoomies (Frenetic Random Activity Periods) Explained",
+      "species": ["dog"],
+      "urgency": "low",
+      "content": "Zoomies or FRAPs which stands for Frenetic Random Activity Periods are sudden bursts of high-energy running, spinning, and seemingly frantic movement. They are completely normal and typically indicate a healthy, happy dog releasing pent-up energy or excitement. Dogs most commonly get zoomies after baths (perhaps because they are relieved it is over), after waking from sleep as a burst of energy, after a period of confinement such as being in a crate, during play or social interactions, or in the early morning or evening which coincides with natural activity peaks. Physically, zoomies are characterized by running in large circles or figure-eights, making tight turns, self-interrupting, and sometimes barking. The dog usually has a bright expression with relaxed face. Zoomies are more common in young dogs and puppies but many adult dogs continue to have them throughout life. Are zoomies a problem? Generally no. However if your dog gets zoomies in dangerous environments such as near traffic or on slippery floors, redirect them to a safe enclosed space. Zoomies that are very frequent in adult dogs may suggest the dog needs more exercise and mental stimulation in their daily routine. Rarely, repetitive circling behavior that is different from playful zoomies can indicate neurological problems and should be evaluated by a vet.",
+      "tags": ["zoomies", "FRAPs", "energy bursts", "normal behavior", "exercise", "excitement", "play", "running"],
+      "when_to_see_vet": "Only if circling is repetitive and compulsive rather than playful, or if other neurological signs are present"
+    },
+    {
+      "id": "beh_005",
+      "title": "Why Do Cats Knock Things Off Tables and Surfaces?",
+      "species": ["cat"],
+      "urgency": "low",
+      "content": "Cats knocking objects off tables and counters is a common behavior that frustrates many owners but serves several purposes from the cat's perspective. Attention seeking is one of the most common reasons because cats quickly learn that knocking objects makes their humans react. This is reinforced by any response including scolding since the cat just wants interaction. Predatory instinct plays a role because cats are natural hunters and the movement of objects mimics the movement of prey. Pawing at objects and making them fall satisfies this drive. Curiosity and exploration drives cats to investigate objects through touch and by observing how things fall and move. Boredom in under-stimulated indoor cats leads to seeking any form of entertainment or stimulation. Some cats may knock specific items to alert their owner to needs such as an empty water bowl. How to address this behavior: provide adequate play sessions of 15-20 minutes twice daily using wand toys that mimic prey. Environmental enrichment through cat trees, window perches, puzzle feeders, and rotating toys reduces boredom. Do not react dramatically to the behavior as this reinforces it. Remove particularly treasured or breakable objects from accessible surfaces. Provide designated play areas with acceptable objects to investigate. Interactive play satisfies predatory drive and reduces the behavior significantly in most cats.",
+      "tags": ["knocking things over", "attention seeking", "predatory behavior", "boredom", "enrichment", "curiosity", "cat behavior"],
+      "when_to_see_vet": "Behavioral issue; not typically medical. Consult if accompanied by other unusual behavior changes"
+    },
+    {
+      "id": "beh_006",
+      "title": "Cat Slow Blink Communication — The Cat Kiss",
+      "species": ["cat"],
+      "urgency": "low",
+      "content": "The slow blink in cats is a form of non-threatening communication often called the cat kiss or cat smile. When a cat slowly closes their eyes partway or fully while looking at you and then opens them slowly, this signals trust, relaxation, and affectionate feelings. In cat communication terms, a direct hard stare is threatening. By breaking eye contact through a slow blink, a cat is communicating that they do not perceive you as a threat and feel comfortable in your presence. Research published in the journal Scientific Reports in 2020 by Tasmin Humphrey and Karen McComb at the University of Sussex confirmed that cats do respond to slow blinking from humans and that this behavior increases positive affective states. You can slow blink back at your cat to communicate affection and trust. The technique: make soft eye contact, then slowly close your eyes halfway or fully for a few seconds, then slowly open them again. Many cats will reciprocate and even approach you more willingly after receiving a slow blink. This is especially useful with shy or fearful cats who are not yet comfortable being approached directly. The slow blink is a positive sign of the bond between you and your cat. Cats that refuse to make eye contact at all or have very dilated pupils in a tense body may be fearful or stressed rather than showing a variation of the slow blink.",
+      "tags": ["slow blink", "cat kiss", "communication", "trust", "affection", "body language", "eye contact", "bonding"],
+      "when_to_see_vet": "Not applicable; positive behavior"
+    },
+    {
+      "id": "beh_007",
+      "title": "Cat Kneading Behavior — Why Cats Make Biscuits",
+      "species": ["cat"],
+      "urgency": "low",
+      "content": "Kneading is when cats rhythmically push their paws in an alternating pattern against a soft surface, often purring at the same time. This behavior is sometimes called making biscuits or making bread due to its similarity to kneading dough. The origin of this behavior is neonatal nursing. Kittens knead their mother's mammary glands to stimulate milk flow during nursing. The behavior becomes associated with comfort, warmth, and contentment. Adult cats retain this behavior as a form of self-soothing and expression of deep comfort and happiness. Cats knead when they are content and relaxed, often while being petted, settling on a soft blanket, or preparing to sleep. Some cats knead their owners while sitting on them which is a significant sign of trust and affection. The behavior may also relate to territorial marking since cats have scent glands in their paws and kneading deposits scent on surfaces. Additionally, wild cats kneaded grass and leaves to create comfortable resting spots and this behavior may persist as an instinct. If your cat's kneading includes sharp claws that are uncomfortable for you, you can gently redirect them to a thick blanket, trim their nails regularly, or use soft nail caps. Never punish kneading as it is a deeply ingrained comfort behavior. A cat that kneads on you is showing a high level of trust and affection.",
+      "tags": ["kneading", "making biscuits", "comfort behavior", "contentment", "nursing behavior", "purring", "affection", "instinct"],
+      "when_to_see_vet": "Not applicable; positive comfort behavior"
+    },
+    {
+      "id": "beh_008",
+      "title": "Why Cats Scratch Furniture and How to Redirect It",
+      "species": ["cat"],
+      "urgency": "low",
+      "content": "Scratching is a completely natural and necessary behavior for cats that serves multiple purposes: it maintains claw health by removing the outer dead sheath of the nail revealing the sharper nail beneath, it stretches muscles in the back, shoulders, and legs particularly after sleeping, it marks territory both visually through the marks left on the surface and chemically through scent glands in the paws, and it is a form of stress relief and emotional expression. Cats scratch on vertical surfaces like sofas and door frames, and horizontal surfaces like carpets. Understanding this helps redirect rather than eliminate the behavior. Effective redirection strategies: provide appropriate scratching surfaces including tall sturdy vertical posts at least 32 inches high since cats need to fully stretch, horizontal cardboard scratchers for cats who prefer horizontal surfaces, and sisal fabric posts which most cats prefer over carpet-covered posts. Place scratching posts near areas where your cat already scratches and near sleeping areas since cats often scratch when waking. Make the furniture less appealing by using double-sided tape, aluminum foil, or commercial deterrent sprays on problem areas temporarily. Make the post more appealing by rubbing it with catnip or a toy. Never declaw your cat as this is an amputation of the last bone in each toe causing long-term pain, mobility issues, and behavioral problems. Regular nail trimming reduces damage from scratching.",
+      "tags": ["scratching", "furniture scratching", "scratching post", "claw maintenance", "territory marking", "declawing", "redirection"],
+      "when_to_see_vet": "Not medical; consult certified cat behaviorist if severe scratching persists despite good redirection strategies"
+    },
+    {
+      "id": "beh_009",
+      "title": "Cat Hiding Behavior — When It Is Normal and When to Worry",
+      "species": ["cat"],
+      "urgency": "variable",
+      "content": "Cats are both predator and prey animals and hiding is an innate behavior that serves important functions. Normal hiding behavior includes retreating to quiet spots during loud events like thunderstorms or parties, hiding when unfamiliar people visit since cats are selective about social interactions, resting in sheltered spots as cats prefer enclosed spaces that give them a sense of security, and new cats hiding for days to weeks while adjusting to a new home. Providing hiding spots through cat trees with enclosed boxes, cardboard boxes, and quiet rooms is an important part of environmental enrichment. Do not force a hiding cat to come out as this increases fear. However hiding can signal medical problems when: a cat that normally does not hide suddenly becomes very reclusive, the cat is hiding for much longer than usual, hiding is combined with not eating, not using the litter box, or changes in elimination, the cat seems to be in pain when touched or approached, or the cat appears lethargic and unresponsive even to favorite treats or toys. Sick or injured cats often hide instinctively because vulnerable animals hide to avoid predators. If your previously social cat suddenly hides extensively for more than 24-48 hours especially combined with other symptoms, seek veterinary care. The stress of a new baby, new pet, or major household change can also trigger temporary hiding that resolves as the cat adjusts.",
+      "tags": ["hiding", "reclusive", "normal behavior", "fear", "sick cat", "stress", "shelter", "instinct"],
+      "when_to_see_vet": "If hiding is sudden onset in a normally social cat, lasts more than 48 hours, or combined with other symptoms"
+    },
+    {
+      "id": "beh_010",
+      "title": "Resource Guarding in Dogs — Prevention and Management",
+      "species": ["dog"],
+      "urgency": "medium",
+      "content": "Resource guarding is when a dog uses threatening behaviors such as stiffening, growling, snapping, or biting to keep others away from something they value, which can include food, toys, sleeping spots, water bowls, or even people. It is a natural behavior evolutionarily because wild canids that successfully guarded resources were more likely to survive and reproduce. However it is dangerous in household pets because it can lead to biting. Signs range from mild: stiffening, eating faster when approached, to moderate: growling, showing teeth, to severe: snapping or biting. Prevention in puppies: practice the trade game from puppyhood by regularly trading high-value items for even higher-value treats. Approach and add food to the bowl while puppy eats to associate human approach with good things. Handle food bowl regularly. Management of established resource guarding: never use force or punishment as it suppresses the warning signals without addressing the underlying motivation and creates dogs that bite without warning. Management strategies include feeding in a separate room, removing high-value items when children are present, teaching the drop it and leave it commands using positive reinforcement, and consulting a certified professional dog trainer or veterinary behaviorist. Resource guarding between pets requires careful management with separate feeding stations. Consult a professional before the behavior escalates to biting.",
+      "tags": ["resource guarding", "food guarding", "aggression", "growling", "biting", "prevention", "management", "trade game"],
+      "when_to_see_vet": "Consult veterinary behaviorist if dog has snapped or bitten over resources; professional guidance is essential"
+    },
+    {
+      "id": "beh_011",
+      "title": "Fear and Anxiety in Pets — Recognition and Help",
+      "species": ["dog", "cat"],
+      "urgency": "medium",
+      "content": "Fear and anxiety are common in both dogs and cats and significantly impact quality of life. Anxiety is anticipation of future danger while fear is a response to an immediate threat. Common fear triggers include thunderstorms, fireworks, strangers, other animals, and veterinary visits. Signs in dogs include trembling, panting, hiding, destructive behavior, loss of bowel or bladder control, excessive barking or howling, self-injury trying to escape, and refusal to eat. Signs in cats include hiding, hissing, growling, dilated pupils, tail tucked tightly, flattened ears, and excessive grooming or grooming cessation. Fearfulness can be genetic as it runs in families, situational from past negative experiences or lack of socialization, or related to medical conditions such as pain, cognitive decline, or thyroid disorders. Management approaches: identify and reduce exposure to triggers where possible. Desensitization involves gradual exposure to the trigger at very low intensity paired with positive experiences and slowly increasing intensity over time. Counter-conditioning changes the emotional response to the trigger. Safe spaces with a comfortable hiding spot help. Calming aids include Thunder shirts which provide gentle constant pressure, pheromone products such as Adaptil for dogs and Feliway for cats, and certain supplements. For severe anxiety, veterinary-prescribed medications combined with behavior modification are often the most effective approach.",
+      "tags": ["fear", "anxiety", "thunderstorms", "fireworks", "phobias", "stress", "calming", "desensitization", "pheromones"],
+      "when_to_see_vet": "For severe anxiety or phobias, veterinary medication combined with behavior modification significantly improves outcomes"
+    },
+    {
+      "id": "beh_012",
+      "title": "Why Cats Bring Prey to Their Owners",
+      "species": ["cat"],
+      "urgency": "low",
+      "content": "Cats that go outdoors or hunt insects and small animals indoors often present their catches to their human family members, which can include dead mice, birds, lizards, or insects. This behavior, while disturbing to many owners, is motivated by positive intentions from the cat's perspective. The most widely accepted explanation is that cats consider their human family members as social companions similar to family or colony members and are sharing resources as they would with other cats in a social group. In wild cat colonies, dominant cats that hunt successfully may bring food back to share with kittens or other colony members. Another theory suggests that cats are attempting to teach their owners to hunt, similar to how a mother cat would bring prey to kittens as a teaching tool, especially since the owner seems to be a poor hunter who never catches their own prey. Yet another explanation is that the cat is simply proud of their successful hunt and is showing off their skills to a trusted audience. Some cats may simply bring toys or objects to their owners as a form of social play sharing without the hunting component. To reduce actual hunting if it concerns you about wildlife impact: keep cats indoors which is also safer for the cat, attach a bell collar to give warning to wildlife, provide ample indoor predatory play sessions to satisfy the hunting drive.",
+      "tags": ["prey offering", "dead animals", "hunting", "social behavior", "teaching", "outdoor cat", "sharing"],
+      "when_to_see_vet": "Not medical; normal hunting behavior. Ensure cat is current on parasite prevention."
+    }
+  ]
+}

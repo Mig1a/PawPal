@@ -1,222 +1,346 @@
-# PawPal+ — Pet Care Scheduling Assistant
+# PawPal+ — AI-Powered Pet Care Assistant
 
-PawPal+ is a Streamlit web application that helps pet owners plan, schedule, and track daily care tasks for one or more pets. It generates a chronological daily schedule, warns about conflicts, auto-advances recurring tasks, and surfaces priority-based recommendations.
+> RAG · Agentic Workflow · Multi-Expert Personas · Reliability System
+>
+> GMU AI-110 Spring 2026 — Final Project
 
----
-
-## Screenshots
-
-**Owner & Pet registration form**
-![Owner & Pet form](live_pic%20(1).png)
-
-**Add a Task — Feeding task with priority slider**
-![Add a Task form](live_pic%20(4).png)
-
-**Today's Schedule — task details card with "Mark done" button**
-![Today's Schedule with task card](live_pic%20(3).png)
-
-**Schedule summary — conflict check, metrics, and status indicators**
-![Schedule summary and metrics](live_pic%20(2).png)
+[![Python](https://img.shields.io/badge/python-3.9%2B-blue)](https://www.python.org/)
+[![Streamlit](https://img.shields.io/badge/streamlit-1.30%2B-red)](https://streamlit.io/)
+[![OpenAI](https://img.shields.io/badge/OpenAI-gpt--4o--mini-green)](https://platform.openai.com/)
+[![Tests](https://img.shields.io/badge/tests-54%20passing-brightgreen)](#testing)
+[![License](https://img.shields.io/badge/license-MIT-blue)](#license)
 
 ---
 
-## Table of Contents
+## Overview
 
-1. [Features](#features)
-2. [Getting Started](#getting-started)
-3. [Usage Guide](#usage-guide)
-4. [Architecture Overview](#architecture-overview)
-5. [Testing](#testing)
-6. [Confidence & Known Gaps](#confidence--known-gaps)
+PawPal+ is a full-stack AI pet care assistant built on top of the original PawPal task scheduler (Modules 1–3). It combines a curated 57-entry knowledge base with Retrieval-Augmented Generation (RAG) and a multi-step agentic workflow to answer pet health, nutrition, training, and behavior questions — grounded in real sources, scored for confidence, and always honest about when a veterinarian is the right answer.
 
 ---
 
 ## Features
 
-### 1. Chronological Schedule (Time-Sorted Display)
-Tasks are always displayed earliest-first regardless of insertion order.
-`Scheduler.sort_by_time()` runs Python's built-in **Timsort** (`O(n log n)`) on the task list using `due_time` as the sort key. `Scheduler.add_task()` also re-sorts the master list on every insert, so the schedule stays ordered in real time.
-
-### 2. Flexible Task Filtering
-`PetCareSystem.filter_tasks(status, pet_name)` lets you query tasks by:
-- **Completion status** — `pending`, `complete`, or `in_progress`
-- **Pet name** — case-insensitive substring match
-- **Both combined** — applied sequentially using list comprehensions
-
-An unrecognised status raises a `ValueError` (validated against a `set` for O(1) membership check). An unknown pet name returns `[]` instead of raising.
-Results are passed through `sort_by_time()` so filtered output is always chronological.
-
-### 3. Conflict Detection
-Two levels of conflict detection catch scheduling clashes before they cause problems:
-
-| Method | Scope | Algorithm |
-|---|---|---|
-| `Scheduler.detect_conflicts(pet_id, window_minutes)` | Single pet | O(n²) pairwise comparison of non-complete tasks; flags pairs whose `due_time` gap ≤ `window_minutes` |
-| `Scheduler.detect_all_conflicts(window_minutes)` | All pets | Same O(n²) loop across the full task list — catches both same-pet and cross-pet overlaps |
-
-`PetCareSystem.get_conflict_warnings()` formats raw `(Task, Task)` pairs into human-readable strings labelled `[same-pet]` or `[cross-pet]`, using a `{pet_id: pet_name}` dict for O(1) name lookup. The Streamlit UI shows these warnings automatically whenever a schedule is displayed.
-
-### 4. Automatic Daily & Weekly Recurrence
-When a recurring task is completed, `Scheduler.generate_next_occurrence()` clones it and schedules the follow-up automatically:
-
-- **Daily** — next occurrence is anchored to `today + 1 day`
-- **Weekly** — next occurrence is anchored to `today + 7 days`
-- **Monthly** — not auto-generated; managed manually to avoid month-end arithmetic edge cases
-
-The clone preserves the original **time-of-day** (e.g. an 08:30 task stays at 08:30). Crucially, the next date is anchored to *today* rather than the original due time, so completing an overdue task never creates a near-immediate follow-up. `copy.copy()` is used to clone the task; per-occurrence state fields (`last_fed`, `last_dose_time`, `start_time`, `actual_duration`) are reset to `None` on the clone.
-
-### 5. Priority-Based Task Suggestion
-`Scheduler.prioritize_tasks()` scores every task using `Task.calculate_priority()`:
-- Completed tasks → score `0`
-- Overdue + pending → `priority + 10` (urgency boost)
-- Normal pending → `priority` (1–10 slider set by the user)
-
-Tasks are sorted descending by score. `Scheduler.suggest_next_task()` returns the single highest-priority pending task, surfaced in the UI as a recommendation.
-
-### 6. Specialized Task Types
-Four task subclasses extend the base `Task` with domain-specific tracking:
-
-| Type | Extra Fields | Extra Behaviour |
-|---|---|---|
-| `FeedingTask` | food type, portion size, diet notes, last-fed timestamp | `record_feeding()` timestamps the meal and marks complete |
-| `WalkTask` | duration goal, distance goal, location, start/end time | `start_walk()` sets status to `in_progress`; `end_walk()` computes elapsed minutes |
-| `MedicationTask` | medication name, dosage, instructions, refill date | `check_refill_needed()` compares today against refill date; `validate_schedule()` flags medication time collisions |
-| `AppointmentTask` | provider name, location, contact info, reminder time | `reschedule()` updates both due time and reminder; `add_provider_notes()` accumulates provider notes |
-
-### 7. Medication Schedule Validation
-`PetCareSystem.validate_pet_medication_schedule(pet_id)` checks each `MedicationTask` against all other medication tasks for the same pet. Any two medications sharing an exact `due_time` are flagged, returning a dict of `{medication_name: [conflicting_names]}`.
-
-### 8. System Summary Metrics
-`PetCareSystem.get_system_summary()` returns a snapshot dict with counts for total pets, total tasks, overdue tasks, upcoming tasks, and pending reminders. The Streamlit UI renders these as live metric tiles.
+| Feature | Details |
+|---------|---------|
+| **RAG Retrieval** | TF-IDF cosine similarity across 57 expert-written knowledge base entries in 5 topic areas |
+| **Agentic Workflow** | 7-step pipeline: intent classification → retrieval → context assembly → OpenAI call → confidence scoring → urgency detection → logging |
+| **4 Expert Personas** | General Pet Care, Veterinary Assistant, Certified Dog Trainer, Cat Behavior Specialist |
+| **Confidence Scoring** | 4-factor weighted formula; responses below threshold auto-queued for human review |
+| **Urgency Detection** | Keyword scanning flags emergency, high, and medium urgency with visible UI alerts |
+| **Pet Scheduler** | Original multi-pet task scheduler with conflict detection and daily recurrence |
+| **System Reports** | Live reliability stats, review queue management, knowledge base status |
+| **54 Tests** | Full pytest suite covering scheduling logic, RAG retrieval, confidence scoring, and agent workflow |
 
 ---
 
-## Getting Started
+## Architecture
 
-### Requirements
+```
+╔══════════════════════════════════════════════════════════════════╗
+║                    PawPal+ System Architecture                    ║
+╠══════════════════════════════════════════════════════════════════╣
+║                                                                    ║
+║   [User] ──► [Streamlit Web UI  (app.py)]                        ║
+║                        │                                          ║
+║          ┌─────────────┴──────────────────┐                      ║
+║          ▼                                ▼                       ║
+║  [PetCareSystem]              [PawPalAgent (ai_agent.py)]        ║
+║  (scheduler,                   1. classify_intent()              ║
+║   conflicts,                   2. RAGRetriever.retrieve()        ║
+║   recurrence)                  3. Build context + expert prompt  ║
+║                                4. OpenAI API call                 ║
+║                                5. compute_confidence()            ║
+║                                6. detect_urgency()                ║
+║                                7. log_interaction()               ║
+║                                        │                          ║
+║              ┌─────────────────────────┼──────────────┐          ║
+║              ▼                         ▼               ▼          ║
+║  [RAGRetriever]         [OpenAI API]      [ReliabilitySystem]    ║
+║  TF-IDF index           gpt-4o-mini       · confidence score     ║
+║          │                                · validate response     ║
+║          ▼                                · log file              ║
+║  [Knowledge Base JSON]                    · human review queue    ║
+║  · symptoms_guide.json                                            ║
+║  · nutrition_guide.json                                           ║
+║  · training_guide.json                                            ║
+║  · behavior_guide.json                                            ║
+║  · general_care.json                                              ║
+╚══════════════════════════════════════════════════════════════════╝
 
-- Python 3.9 or later
-- pip
+Data Flow:
+  User Input
+    → Intent Classification (keyword frequency scoring, no API call)
+    → Knowledge Retrieval   (TF-IDF cosine similarity, top-k docs)
+    → Context Assembly      (retrieved docs + pet profile + history)
+    → OpenAI Generation     (expert-mode system prompt + context)
+    → Confidence Scoring    (4-factor weighted formula)
+    → Urgency Detection     (keyword scan of generated response)
+    → Log + Optional Review Queue
+    → Structured Response   → Streamlit UI
+```
 
-### Setup
+---
+
+## Project Structure
+
+```
+pawpal-plus/
+├── app.py                     # Streamlit UI — 3 tabs: Scheduler, AI, Reports
+├── pawpal_system.py           # Original scheduling core (preserved from Modules 1–3)
+├── ai_agent.py                # PawPalAgent — agentic workflow + expert personas
+├── rag_retriever.py           # RAGRetriever — TF-IDF knowledge base retrieval
+├── reliability.py             # ReliabilitySystem — confidence, logging, review queue
+├── main.py                    # Original CLI entry point (preserved)
+├── knowledge_base/
+│   ├── symptoms_guide.json    # 15 entries — symptoms, urgency levels, vet guidance
+│   ├── nutrition_guide.json   # 10 entries — feeding, diet, toxic foods
+│   ├── training_guide.json    # 10 entries — positive reinforcement methods
+│   ├── behavior_guide.json    # 12 entries — feline/canine behavior explanations
+│   └── general_care.json     # 10 entries — vaccines, dental, grooming, wellness
+├── tests/
+│   ├── test_pawpal.py         # 14 scheduling tests (preserved)
+│   └── test_ai_features.py    # 40 AI feature tests
+├── logs/
+│   └── pawpal_ai.log          # Auto-generated structured interaction log
+├── model_card.md              # Model card — limitations, ethics, reflection
+├── requirements.txt
+├── .env.example               # Environment variable template
+└── README.md
+```
+
+---
+
+## Quickstart
+
+### Prerequisites
+
+- Python 3.9+
+- An [OpenAI API key](https://platform.openai.com/api-keys)
+
+### 1. Clone and enter the project
 
 ```bash
-# 1. Clone or download the project
-# 2. Create and activate a virtual environment
-python -m venv .venv
-source .venv/bin/activate        # macOS / Linux
-.venv\Scripts\activate           # Windows
+git clone https://github.com/Mig1a/pawpal-plus.git
+cd pawpal-plus
+```
 
-# 3. Install dependencies
+### 2. Create a virtual environment
+
+```bash
+python -m venv .venv
+
+# Windows
+.venv\Scripts\activate
+
+# macOS / Linux
+source .venv/bin/activate
+```
+
+### 3. Install dependencies
+
+```bash
 pip install -r requirements.txt
 ```
 
-### Run the Web App
+### 4. Configure your API key
+
+```bash
+cp .env.example .env
+```
+
+Open `.env` and set:
+
+```env
+OPENAI_API_KEY=sk-...your-key-here...
+```
+
+### 5. Run
 
 ```bash
 streamlit run app.py
 ```
 
-The app opens at `http://localhost:8501` in your browser.
-
-### Run the CLI Demo
-
-```bash
-python main.py
-```
-
-Prints a full schedule demo, conflict detection demo, and filtering demo using two pre-loaded pets (Buddy and Luna) with intentional conflicts.
+App opens at `http://localhost:8501`.
 
 ---
 
-## Usage Guide
+## Usage
 
-### Step 1 — Add a Pet
-Fill in the **Owner & Pet** section: owner name, pet name, species, breed, age, weight, and optional notes. Submit to register the pet. You can add multiple pets and switch between them with the active-pet selector.
+1. **Scheduler tab** — Register a pet (name, species, breed, age, weight) and add tasks (feeding, walk, medication, appointment). Generate today's schedule with conflict warnings.
+2. **AI Pet Assistant tab** — Choose an expert mode, optionally link a pet profile, and ask any pet care question. The response shows the answer, confidence score, urgency alert (if any), and the knowledge base sources that informed it.
+3. **System Reports tab** — View reliability statistics, the human review queue, and knowledge base status.
 
-### Step 2 — Add Tasks
-Use the **Add a Task** section to create tasks for the active pet:
-- Choose the task type (Feeding, Walk, Medication, Appointment)
-- Set a title, description, due date, and due time
-- Adjust the priority slider (1 = low, 10 = critical)
-- Enable recurrence and choose Daily or Weekly if the task repeats
-- Fill in type-specific fields (food type, medication name, provider, etc.)
+### Sample Interactions
 
-### Step 3 — View & Manage the Schedule
-Click **View Schedule** to generate today's plan. The schedule shows:
-- A summary table (time, task, type, priority, recurrence, status)
-- Detailed cards per task with a **Mark Done** button
-- Overdue indicators (red circle) and refill warnings for medications
-- Conflict warnings (`[same-pet]` or `[cross-pet]`) when tasks overlap within 30 minutes
-- Summary metrics (pets, tasks, overdue, upcoming) at the bottom
+**Symptom triage — Veterinary Assistant mode**
+```
+Q: My dog keeps scratching his ears and shaking his head.
+   There's dark brown discharge and a bad smell.
 
-Clicking **Mark Done** completes the task and, for daily/weekly recurring tasks, automatically schedules the next occurrence.
+A: These symptoms are classic signs of otitis externa (ear infection).
+   Dark brown waxy buildup often indicates yeast involvement.
+
+   What to do now:
+   • Gently clean the visible outer ear with a vet-approved solution
+   • Do not insert anything into the ear canal
+   • Schedule a vet appointment within 3–4 days; sooner if the dog is in pain
+
+   🔴 Please schedule a veterinary appointment.
+
+   Confidence: 78% (High) | Source: Symptoms Guide — Ear Scratching and Head Shaking
+```
+
+**Training plan — Dog Trainer mode**
+```
+Q: Create a training plan for my 8-week-old puppy.
+
+A: Weeks 1–2 (Foundation): name recognition, sit, handling exercises
+   Weeks 3–4 (Core Commands): stay, down, leave it, crate intro
+   Weeks 5–8 (Generalisation): proof commands, new environments,
+   loose-leash walking, socialization outings
+
+   Confidence: 81% (High) | Source: Training Guide — 8-Week Puppy Program
+```
+
+**Urgent concern — General mode**
+```
+Q: My cat stopped eating yesterday and is hiding under the bed.
+   She is usually very social.
+
+A: A social cat that suddenly hides and refuses food is showing two
+   serious warning signs together. Cats risk hepatic lipidosis
+   (fatty liver disease) after 24–48 hours without eating.
+
+   Do not wait more than 24 hours — schedule a vet appointment today.
+
+   🔴 Urgent — please seek veterinary care.
+
+   Confidence: 74% (Medium) | Sources: Symptoms Guide, Behavior Guide
+```
 
 ---
 
-## Architecture Overview
+## Confidence Scoring
+
+Every response is scored using a 4-factor weighted formula:
 
 ```
-PetCareSystem  (facade — the only entry point for UI/CLI)
-├── _pets: list[Pet]
-│   └── Pet._tasks: list[Task]       ← per-pet authoritative store
-├── _scheduler: Scheduler
-│   └── _tasks: list[Task]           ← same object references as Pet._tasks
-└── _reminders: list[Reminder]
+confidence = 0.35 × retrieval_quality    (cosine similarity of top retrieved doc)
+           + 0.25 × response_substance   (word count proxy, 150 words = 1.0)
+           + 0.20 × intent_clarity       (specific intent scores higher than general)
+           + 0.20 × knowledge_grounding  (fraction of retrieved tags appearing in response)
 ```
 
-**Dual-ownership sync:** `PetCareSystem.add_task_to_pet()` is the single write path. It adds the task to both `Pet._tasks` and `Scheduler._tasks` using the same object reference — no data duplication, no drift.
+Responses below the 0.50 threshold are automatically added to the human review queue and displayed with a "Low Confidence" badge.
 
-**Key design patterns:**
-- **Facade** — `PetCareSystem` shields callers from `Scheduler` and `Pet` internals
-- **Inheritance** — `FeedingTask`, `WalkTask`, `MedicationTask`, `AppointmentTask` all extend `Task`
-- **Delegation** — priority scoring logic lives on `Task.calculate_priority()`, not inside `Scheduler`
-- **Today-anchored recurrence** — prevents cascading overdue follow-ups when tasks are completed late
+---
+
+## Expert Modes
+
+| Mode | Icon | Best for |
+|------|------|----------|
+| General Pet Care | 🐾 | Broad, everyday questions across species |
+| Veterinary Assistant | 🩺 | Symptom triage, when to seek care |
+| Certified Dog Trainer | 🐕 | Positive reinforcement training plans |
+| Cat Behavior Specialist | 🐈 | Feline ethology, enrichment, multi-cat dynamics |
 
 ---
 
 ## Testing
 
-### Run the Test Suite
-
 ```bash
+# Run the full suite
+python -m pytest tests/ -v
+
+# Run only AI feature tests
+python -m pytest tests/test_ai_features.py -v
+
+# Run only scheduling tests
 python -m pytest tests/test_pawpal.py -v
 ```
 
-Or without pytest installed:
+### Results — 54 tests, 54 pass
 
-```bash
-python tests/test_pawpal.py
-```
-
-### Test Coverage
-
-| Category | Tests | What is verified |
-|---|---|---|
-| **Task basics** | `test_mark_complete_changes_status` | `mark_complete()` flips status to `complete` |
-| | `test_add_task_increases_pet_task_count` | `Pet.add_task()` increases the pet's task count by exactly 1 |
-| **Sorting** | `test_sort_by_time_returns_chronological_order` | Tasks added out of order come back earliest-first |
-| | `test_sort_by_time_empty_list` | Sorting an empty scheduler returns `[]` without raising |
-| | `test_sort_by_time_preserves_all_tasks` | No tasks are dropped or duplicated after sorting |
-| **Recurrence** | `test_daily_recurring_task_creates_next_day_occurrence` | Completing a daily task generates a new task due tomorrow |
-| | `test_daily_recurrence_preserves_time_of_day` | The next occurrence keeps the original 08:30 time-of-day |
-| | `test_completing_daily_task_marks_original_complete` | The original task's status is set to `complete` |
-| | `test_non_recurring_task_produces_no_next_occurrence` | Non-recurring tasks return `None` from `complete_task()` |
-| | `test_monthly_recurring_task_produces_no_auto_occurrence` | Monthly tasks are not auto-generated |
-| **Conflict detection** | `test_detect_conflicts_flags_same_time_tasks` | Two same-pet tasks at the same time are flagged |
-| | `test_detect_conflicts_no_false_positives_outside_window` | Tasks 2 hours apart are not flagged within a 30-min window |
-| | `test_detect_all_conflicts_catches_cross_pet_overlap` | Same-time tasks across different pets are detected |
-| | `test_completed_tasks_excluded_from_conflict_detection` | Completed tasks are ignored during conflict checks |
+| Suite | Tests | Covers |
+|-------|-------|--------|
+| **RAGRetriever** | 9 | KB load, top-k retrieval, relevance ranking, species filter, score bounds |
+| **ReliabilitySystem** | 15 | Confidence range, urgency levels, validation, logging, review queue |
+| **Intent Classification** | 5 | All 4 intent categories + general fallback |
+| **Expert Modes** | 4 | Required keys, prompt content, persona-specific guardrails |
+| **PawPalAgent** | 6 | Return schema, confidence bounds, no-key error, urgency, step trace, review flagging |
+| **Scheduler (original)** | 14 | Task basics, sorting, recurrence, conflict detection |
+| **Total** | **54** | |
 
 ---
 
-## Confidence & Known Gaps
+## Design Decisions
 
-**Current confidence: 3 / 5 stars**
+**TF-IDF over vector embeddings** — Runs entirely locally with no embedding API cost or latency. Handles pet care domain vocabulary well since symptoms, breed names, and procedure terms are highly distinctive tokens. A production system would upgrade to sentence embeddings in FAISS or ChromaDB for better semantic recall.
 
-The core logic for sorting, daily recurrence, and same-pet conflict detection is well-tested and behaves correctly in all verified cases. Confidence is held back for two reasons:
+**Expert modes as system prompt variants** — Four distinct personas are implemented as system prompt swaps, adding no inference cost while meaningfully shaping tone, depth, and guardrails.
 
-1. The test suite does not yet cover `PetCareSystem`-level integration (dual-ownership sync, `remove_pet` orphan cleanup, ID assignment on recurrence) or edge cases like month-end date arithmetic and walk tracking state.
-2. The two original tests only covered `mark_complete` and `add_task`, so the overall surface is still narrow relative to the full system.
+**gpt-4o-mini as default** — Fast (under 2 seconds), cost-efficient for an interactive demo. Override with `PAWPAL_AI_MODEL=gpt-4o` in `.env` for more demanding questions.
 
-Adding integration tests for `PetCareSystem` and edge-case coverage for `WalkTask` and month-end recurrence would push this to 4–5 stars.
+**Keyword intent classification** — Zero API calls, deterministic, and explainable. Misses paraphrase variations but is sufficient for routing within a well-bounded domain.
+
+**Multi-factor confidence** — Single retrieval score would penalise valid general questions. The 4-factor formula produces a more stable signal across query types.
+
+### Trade-offs
+
+| Decision | Benefit | Trade-off |
+|----------|---------|-----------|
+| TF-IDF retrieval | Free, local, fast | Lower semantic recall vs. embeddings |
+| In-memory review queue | Simple, zero deps | Lost on app restart |
+| Keyword intent classifier | Explainable, instant | Brittle to paraphrasing |
+| gpt-4o-mini default | Cheap and fast | Less nuanced on complex medical questions |
+| JSON knowledge base | Human-editable, version-controlled | Not scalable past ~1000 docs |
+
+---
+
+## Environment Variables
+
+| Variable | Default | Description |
+|----------|---------|-------------|
+| `OPENAI_API_KEY` | — | **Required.** Your OpenAI API key |
+| `PAWPAL_AI_MODEL` | `gpt-4o-mini` | Model override (`gpt-4o`, `gpt-4-turbo`) |
+| `PAWPAL_CONFIDENCE_THRESHOLD` | `0.50` | Below this, responses are flagged for review |
+| `PAWPAL_LOG_FILE` | `logs/pawpal_ai.log` | Path for structured interaction log |
+
+---
+
+## Docker
+
+```dockerfile
+FROM python:3.11-slim
+WORKDIR /app
+COPY . .
+RUN pip install --no-cache-dir -r requirements.txt
+EXPOSE 8501
+CMD ["streamlit", "run", "app.py", "--server.port=8501", "--server.address=0.0.0.0"]
+```
+
+```bash
+docker build -t pawpal-plus .
+docker run -p 8501:8501 -e OPENAI_API_KEY=your_key pawpal-plus
+```
+
+---
+
+## Roadmap
+
+- [ ] Sentence-transformer embeddings (FAISS/ChromaDB) for semantic retrieval
+- [ ] SQLite persistence for review queue and interaction history
+- [ ] Breed-specific health risk profiles in the knowledge base
+- [ ] Streamlit Community Cloud one-click deploy
+- [ ] Voice input via Whisper
+- [ ] Multi-language support
+
+---
+
+## License
+
+MIT — see [LICENSE](LICENSE) for details.
+
+---
+
+*PawPal+ · GMU AI-110 Spring 2026 · Built on PawPal from Modules 1–3*
