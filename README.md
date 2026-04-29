@@ -271,7 +271,16 @@ Responses below the 0.50 threshold are automatically added to the human review q
 
 ---
 
-## Testing
+## Testing & Reliability
+
+PawPal+ uses four distinct mechanisms to prove it works, not just seem like it does:
+
+| Mechanism | Implementation | Result |
+|-----------|---------------|--------|
+| **Automated tests** | 54 pytest tests covering RAG retrieval, confidence scoring, urgency detection, intent classification, expert personas, and the full agent pipeline — all using mocked OpenAI calls so no API key is needed to run them | 54 / 54 pass |
+| **Confidence scoring** | Every response is scored 0–1 using a 4-factor weighted formula (retrieval quality, response substance, intent clarity, knowledge grounding). Scores below 0.50 are labelled "Low Confidence" in the UI and automatically queued for human review | Live on every query |
+| **Logging & error handling** | Every interaction is appended to `logs/pawpal_ai.log` with timestamp, query, confidence score, expert mode, and intent. The agent catches API failures, missing keys, and unavailable knowledge base with structured error returns rather than crashes | Verified in `test_log_file_created` |
+| **Human review queue** | Low-confidence responses are automatically added to an in-app review queue visible in the System Reports tab. A reviewer can inspect the query, response, and confidence score, then dismiss or escalate | Verified in `test_low_confidence_flags_for_review` |
 
 ```bash
 # Run the full suite
