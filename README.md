@@ -100,6 +100,8 @@ Data Flow:
     → Structured Response   → Streamlit UI
 ```
 
+![PawPal+ System Architecture Diagram](assets/PetCareSystem%20User-2026-04-29-053150.png)
+
 ### How the architecture works
 
 The Streamlit UI is the single entry point and splits into two independent paths. The left path handles the original pet scheduler — task creation, conflict detection, and recurrence — using the preserved `PetCareSystem` class with no AI involvement. The right path is the agentic AI pipeline: every user question passes through `PawPalAgent`, which first classifies intent locally using keyword scoring (no API call), then queries `RAGRetriever` for the top-4 matching knowledge base passages using TF-IDF cosine similarity, and assembles a context-enriched prompt before calling the OpenAI API. The response comes back to `ReliabilitySystem`, which scores confidence, scans for urgency keywords, and logs the interaction — then everything is returned to the UI as a structured dict so the display layer can show the answer, confidence badge, urgency alert, and source citations independently.
