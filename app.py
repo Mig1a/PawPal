@@ -90,7 +90,7 @@ system: PetCareSystem = st.session_state.system
 st.markdown("# 🐾 PawPal+")
 st.caption(
     "AI-Powered Pet Care Assistant — Smart Scheduling + Expert Advice | "
-    "GMU AI-110 Final Project"
+    "AI-110 Final Project"
 )
 st.divider()
 
