@@ -33,7 +33,7 @@ PawPal+ layers three new systems on top of that preserved scheduling core:
 
 ## Overview
 
-PawPal+ is a full-stack AI pet care assistant built on top of the original PawPal task scheduler (Modules 1–3). It combines a curated 57-entry knowledge base with Retrieval-Augmented Generation (RAG) and a multi-step agentic workflow to answer pet health, nutrition, training, and behavior questions — grounded in real sources, scored for confidence, and always honest about when a veterinarian is the right answer.
+PawPal+ is a full-stack AI pet care assistant built on top of the original PawPal task scheduler. It combines a curated 57-entry knowledge base with Retrieval-Augmented Generation (RAG) and a multi-step agentic workflow to answer pet health, nutrition, training, and behavior questions — grounded in real sources, scored for confidence, and always honest about when a veterinarian is the right answer.
 
 Millions of pet owners turn to the internet for health and care advice, where they encounter outdated, unverified, or outright dangerous information. PawPal+ addresses this by anchoring every AI response to a reviewed knowledge base, making its sources visible, and clearly signalling when professional veterinary care is the only appropriate answer. It is also a complete, reproducible example of how RAG and agentic patterns apply to a real-world care domain.
 
@@ -403,4 +403,4 @@ MIT — see [LICENSE](LICENSE) for details.
 
 ---
 
-*PawPal+ · AI-110 Spring 2026 · Built on PawPal from Modules 1–3*
+*PawPal+ · AI-110 Spring 2026 · Built on PawPal project 2*
