@@ -35,6 +35,8 @@ PawPal+ layers three new systems on top of that preserved scheduling core:
 
 PawPal+ is a full-stack AI pet care assistant built on top of the original PawPal task scheduler (Modules 1–3). It combines a curated 57-entry knowledge base with Retrieval-Augmented Generation (RAG) and a multi-step agentic workflow to answer pet health, nutrition, training, and behavior questions — grounded in real sources, scored for confidence, and always honest about when a veterinarian is the right answer.
 
+Millions of pet owners turn to the internet for health and care advice, where they encounter outdated, unverified, or outright dangerous information. PawPal+ addresses this by anchoring every AI response to a reviewed knowledge base, making its sources visible, and clearly signalling when professional veterinary care is the only appropriate answer. It is also a complete, reproducible example of how RAG and agentic patterns apply to a real-world care domain.
+
 ---
 
 ## Features
@@ -97,6 +99,10 @@ Data Flow:
     → Log + Optional Review Queue
     → Structured Response   → Streamlit UI
 ```
+
+### How the architecture works
+
+The Streamlit UI is the single entry point and splits into two independent paths. The left path handles the original pet scheduler — task creation, conflict detection, and recurrence — using the preserved `PetCareSystem` class with no AI involvement. The right path is the agentic AI pipeline: every user question passes through `PawPalAgent`, which first classifies intent locally using keyword scoring (no API call), then queries `RAGRetriever` for the top-4 matching knowledge base passages using TF-IDF cosine similarity, and assembles a context-enriched prompt before calling the OpenAI API. The response comes back to `ReliabilitySystem`, which scores confidence, scans for urgency keywords, and logs the interaction — then everything is returned to the UI as a structured dict so the display layer can show the answer, confidence badge, urgency alert, and source citations independently.
 
 ---
 
@@ -290,6 +296,20 @@ python -m pytest tests/test_pawpal.py -v
 | **Scheduler (original)** | 14 | Task basics, sorting, recurrence, conflict detection |
 | **Total** | **54** | |
 
+### What worked
+
+The mock-based approach for testing the AI agent worked exactly as intended — by injecting a fake OpenAI client that returns a controlled response string, the full 7-step pipeline could be exercised without any API calls or costs. The species filter in the retriever also worked better than expected: queries about cats consistently returned cat-specific documents even when symptom vocabulary overlapped with dog entries.
+
+### What didn't work (at first)
+
+The urgency detector initially triggered on the phrase "it is important to see a vet" — which appears as routine closing advice in nearly every Veterinary Assistant response. This caused benign queries (routine vaccination questions) to be tagged `medium` urgency, flooding the UI with unnecessary alerts. The keyword list had to be tightened to require more explicit alarm language ("immediately," "do not wait," "emergency vet") rather than any mention of veterinary care.
+
+A second issue was the confidence formula rewarding long responses regardless of accuracy. A verbose but off-topic response could outscore a short, precise one because 25% of the formula was raw word count. Adding the `knowledge_grounding` factor (checking whether response text echoed retrieved document tags) partially corrected this, though the length proxy remains an imperfect signal.
+
+### What I learned
+
+Testing forced me to make the system's implicit assumptions explicit. Writing the confidence tests first revealed that I had no clear definition of what "high confidence" should actually mean — which led to designing the 4-factor formula deliberately rather than using a single arbitrary metric. The process of making something testable made the design better.
+
 ---
 
 ## Design Decisions
@@ -353,6 +373,16 @@ docker run -p 8501:8501 -e OPENAI_API_KEY=your_key pawpal-plus
 - [ ] Streamlit Community Cloud one-click deploy
 - [ ] Voice input via Whisper
 - [ ] Multi-language support
+
+---
+
+## Reflection
+
+Building PawPal+ changed how I think about what an AI system actually is. Before this project, I thought of AI primarily as a model — you send text in, you get text out. After building the full pipeline, I understand that the model is only one component, and often not the most important one. The quality of the knowledge base, the precision of the retrieval step, and the honesty of the confidence signal matter as much as the language model itself. A well-grounded mediocre model beats a powerful model that hallucinates confidently.
+
+The reliability system was the most valuable part to build. Designing the confidence scoring formula forced me to answer a hard question: what does it actually mean for an AI answer to be trustworthy? I could not just say "it feels right" — I had to decompose trust into measurable signals (retrieval quality, response substance, intent clarity, knowledge grounding) and justify the weight of each. That kind of disciplined thinking about AI quality is something I will carry into every future project.
+
+The biggest shift in my problem-solving approach was learning to distrust the happy path. My first instinct was to test that the system works when everything goes right. But the most important tests were the edge cases: what happens when confidence is low, when urgency is high, when the knowledge base has nothing relevant, when the API key is missing? Robust AI is not about making the system succeed under ideal conditions — it is about making it fail gracefully and honestly under real ones.
 
 ---
 
