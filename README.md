@@ -54,6 +54,12 @@ Millions of pet owners turn to the internet for health and care advice, where th
 
 ---
 
+## Demo
+
+<video src="assets/pawpal-demo.mp4" controls width="100%"></video>
+
+---
+
 ## Architecture
 
 ```
