@@ -12,6 +12,25 @@
 
 ---
 
+## Original Project (Modules 1–3)
+
+PawPal started as a Streamlit-based pet care task scheduler that allowed owners to register multiple pets and manage feeding, walk, medication, and appointment tasks from a single interface. Its core capabilities included chronological scheduling, same-time conflict detection, daily recurrence, and a priority-based task suggestion engine — all backed by 14 unit tests covering sorting, conflict, and recurrence logic. The system had no AI features; it was a pure scheduling application built to practice object-oriented Python and test-driven development.
+
+---
+
+## What PawPal+ Adds
+
+PawPal+ layers three new systems on top of that preserved scheduling core:
+
+| Layer | What it adds |
+|-------|-------------|
+| **RAG Knowledge Base** | 57 expert-written entries across 5 categories; TF-IDF retrieval grounds every AI answer in real pet care knowledge |
+| **Agentic Workflow** | 7-step pipeline: classify intent → retrieve → build context → call OpenAI → score confidence → detect urgency → log |
+| **Reliability System** | Multi-factor confidence scoring, response validation, structured logging, and a human review queue |
+| **Expert Modes** | Four specialised personas: General, Veterinary Assistant, Dog Trainer, Cat Behavior Specialist |
+
+---
+
 ## Overview
 
 PawPal+ is a full-stack AI pet care assistant built on top of the original PawPal task scheduler (Modules 1–3). It combines a curated 57-entry knowledge base with Retrieval-Augmented Generation (RAG) and a multi-step agentic workflow to answer pet health, nutrition, training, and behavior questions — grounded in real sources, scored for confidence, and always honest about when a veterinarian is the right answer.
