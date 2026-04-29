@@ -1,7 +1,7 @@
 # Model Card — PawPal+ AI Pet Assistant
 
 **Author:** Million Aboye
-**Course:** AI-110, George Mason University — Spring 2026
+**Course:** AI-110, Spring 2026
 **Project:** Module 4 Final — Production AI Application
 **Model in use:** GPT-4o-mini (OpenAI) via agentic wrapper
 **Date:** April 28, 2026

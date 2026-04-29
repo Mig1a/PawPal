@@ -2,7 +2,7 @@
 
 > RAG · Agentic Workflow · Multi-Expert Personas · Reliability System
 >
-> GMU AI-110 Spring 2026 — Final Project
+> AI-110 Spring 2026 — Final Project
 
 [![Python](https://img.shields.io/badge/python-3.9%2B-blue)](https://www.python.org/)
 [![Streamlit](https://img.shields.io/badge/streamlit-1.30%2B-red)](https://streamlit.io/)
@@ -403,4 +403,4 @@ MIT — see [LICENSE](LICENSE) for details.
 
 ---
 
-*PawPal+ · GMU AI-110 Spring 2026 · Built on PawPal from Modules 1–3*
+*PawPal+ · AI-110 Spring 2026 · Built on PawPal from Modules 1–3*
