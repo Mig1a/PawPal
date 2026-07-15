@@ -228,6 +228,9 @@ with tab_scheduler:
     st.subheader("📅 Today's Schedule")
 
     if st.button("🔄 Generate Schedule", use_container_width=False):
+        st.session_state.show_schedule = True
+
+    if st.session_state.get("show_schedule"):
         if not system._pets:
             st.warning("No pets in the system yet.")
         else:
@@ -297,9 +300,60 @@ with tab_scheduler:
                                 st.write(f"Provider: {task._provider_name} @ {task._location}")
                         with cb:
                             if not is_complete:
-                                if st.button("Mark done", key=f"done_{task._task_id}"):
+                                if st.button("✅ Done", key=f"done_{task._task_id}",
+                                             use_container_width=True):
                                     system.complete_task(task._task_id)
                                     st.rerun()
+                            if st.button("✏️ Edit", key=f"edit_{task._task_id}",
+                                         use_container_width=True):
+                                st.session_state.editing_task_id = task._task_id
+                                st.rerun()
+                            if st.button("🗑️ Delete", key=f"del_{task._task_id}",
+                                         use_container_width=True):
+                                system.remove_task_from_pet(task._pet_id, task._task_id)
+                                if st.session_state.get("editing_task_id") == task._task_id:
+                                    st.session_state.editing_task_id = None
+                                st.rerun()
+
+                        # Inline edit form — shown only for the task being edited
+                        if st.session_state.get("editing_task_id") == task._task_id:
+                            with st.form(f"edit_form_{task._task_id}"):
+                                st.markdown("**✏️ Edit task**")
+                                e_title = st.text_input(
+                                    "Title", value=task._title,
+                                    key=f"e_title_{task._task_id}")
+                                e_desc = st.text_area(
+                                    "Description", value=task._description, height=60,
+                                    key=f"e_desc_{task._task_id}")
+                                e_date = st.date_input(
+                                    "Due date", value=task._due_time.date(),
+                                    key=f"e_date_{task._task_id}")
+                                e_time = st.time_input(
+                                    "Due time", value=task._due_time.time(),
+                                    key=f"e_time_{task._task_id}")
+                                e_prio = st.slider(
+                                    "Priority (1 = low, 10 = high)", 1, 10,
+                                    int(task._priority), key=f"e_prio_{task._task_id}")
+                                e_status = st.selectbox(
+                                    "Status", ["pending", "complete"],
+                                    index=1 if task._status == "complete" else 0,
+                                    key=f"e_status_{task._task_id}")
+                                cs, cc = st.columns(2)
+                                save_edit = cs.form_submit_button(
+                                    "💾 Save", use_container_width=True)
+                                cancel_edit = cc.form_submit_button(
+                                    "Cancel", use_container_width=True)
+
+                            if save_edit:
+                                task.update_details(
+                                    e_title, e_desc,
+                                    datetime.combine(e_date, e_time),
+                                    e_prio, e_status)
+                                st.session_state.editing_task_id = None
+                                st.rerun()
+                            if cancel_edit:
+                                st.session_state.editing_task_id = None
+                                st.rerun()
 
             # Conflicts + summary
             st.divider()
